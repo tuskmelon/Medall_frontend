@@ -1,0 +1,181 @@
+.all-openings {
+  position: relative;
+  font-family: 'Red Hat Display';
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 7.6em;
+    height: 7.6em;
+    border-radius: 50%;
+    background: #b41e85;
+    opacity: 0.38;
+    filter: blur(3em);
+  }
+
+  &::before {
+    top: 5%;
+    left: -2%;
+  }
+
+  &::after {
+    right: -2%;
+    bottom: 10%;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2em;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #027cbc;
+    }
+
+    h3 {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin-top: 1.1em;
+      width: 80%;
+    }
+  }
+
+  &__job-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em 5%;
+  }
+
+  &__card-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 70em;
+
+    &:hover {
+      &::before {
+        // transform: skewX(-3deg);
+        animation: backgroundChange 0.3s linear forwards;
+        // Keyframes written in App.js
+      }
+
+      .all-openings__apply-button {
+        animation: btnBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+          alternate;
+
+        &:hover {
+          animation: none;
+        }
+      }
+    }
+
+    // Appliying gradient border to Card
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      padding: 0.1em;
+      box-sizing: content-box;
+      z-index: -1;
+      border-radius: 1em;
+      transition: all 0.5s;
+      background: linear-gradient(123.13deg, #007cbc 2.02%, #b41e85 97.15%),
+        linear-gradient(0deg, #ffffff, #ffffff);
+    }
+  }
+
+  &__card {
+    width: 100%;
+    background: #fbfbfb;
+    border-radius: 1em;
+  }
+
+  &__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    border-bottom: 0.0625em solid #cbdce5;
+
+    h3 {
+      font-family: 'Poppins';
+      color: #b41e85;
+
+      span {
+        color: #007cbc;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: 600;
+      color: #ffffff;
+      padding: 0.6em 1.5em;
+      background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+      border-radius: 0.6em;
+      box-shadow: 0px 0.55em 2em #5051519e;
+    }
+  }
+
+  &__card-job-description {
+    padding: 1.5em;
+  }
+
+  &__tag-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+
+    p {
+      font-size: 0.875em;
+      font-weight: 700;
+      color: #000000;
+      border: 0.0625em solid #adadad;
+      border-radius: 1.5em;
+      padding: 0.5em 1em;
+    }
+  }
+
+  &__details {
+    margin-top: 1em;
+
+    p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 1.5em;
+      color: #515151;
+      font-size: 0.87em;
+      font-weight: 600;
+      line-height: 1.5;
+
+      img {
+        margin-right: 1em;
+        width: 1.8em;
+        height: 1.8em;
+      }
+    }
+  }
+
+  &__description-icon {
+    align-self: flex-start;
+  }
+}

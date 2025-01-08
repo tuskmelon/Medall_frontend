@@ -1,0 +1,190 @@
+.container {
+  padding: 2em 5%;
+
+  &__heading {
+    font-size: 2.2em;
+    font-weight: 500;
+    color: #464646;
+    text-align: center;
+    padding: 0.4em 0em;
+  }
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin: auto;
+}
+.Subheader {
+  font-size: 1em;
+  font-weight: 600;
+  color: #464646;
+}
+
+.Dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // background-color: red;
+  // padding: 40px;
+  // padding: 2em 5%;
+}
+
+.flex-container {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  padding: 50px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.176);
+}
+
+.selectbox {
+  font-size: 16px;
+  height: 2.5em !important;
+  padding: 20px !important;
+  border: 0.03125em solid #b41e85;
+  font-size: 16px !important;
+}
+
+.button {
+  background-color: #b41e85;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  border-radius: 20px;
+  padding: 5px;
+  min-height: 50px;
+  width: 300px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.searchbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  // float: left;
+  width: 60%;
+  padding: 10px;
+  height: auto;
+  margin: auto;
+
+  /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  background-color: #b41e85;
+  content: '';
+  display: table;
+  clear: both;
+  height: auto;
+  align-items: center;
+}
+
+.card-style {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 500px;
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardcontainer {
+  padding: 2px 16px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-container > div {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.cardbutton {
+  background-color: #b41e85;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 80px;
+}
+
+.cardbutton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.card-header {
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.addressHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 720px) {
+  .flex-container {
+    width: 100%;
+    padding: 35px;
+  }
+  .column {
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    padding: 0px;
+  }
+  .container {
+    padding: 0px;
+  }
+  .container__heading {
+    font-size: 1.9em;
+  }
+}

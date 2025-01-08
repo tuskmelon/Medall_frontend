@@ -1,0 +1,125 @@
+.services {
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 2em 0;
+  margin: 4em 0 0 0;
+
+  h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1em;
+
+    span {
+      color: #007cbc;
+    }
+  }
+
+  &__links {
+    font-size: 1em;
+    font-weight: 700;
+    background: #def4ff;
+    padding: 5em 5%;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      li {
+        padding: 0.5em;
+        a,
+        span {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          text-decoration: none;
+          color: #3c5b99;
+          cursor: pointer;
+
+          svg {
+            width: 3.5em;
+            height: 3.5em;
+            padding: 1em;
+            border-radius: 50%;
+            box-sizing: content-box;
+            background: #ffffff;
+            box-shadow: 0.125em 0.125em 0.5em rgba(0, 0, 0, 0.25);
+          }
+
+          p {
+            margin-top: 1em;
+          }
+        }
+
+        &:hover {
+          background: #ffffff;
+          box-shadow: 0.125em 0.125em 1em rgba(0, 0, 0, 0.25);
+          border-radius: 0.75em;
+
+          a,
+          span {
+            svg {
+              color: #ffffff;
+              background: #007cbc;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 898px) {
+    display: none;
+    // &__divider {
+    //   display: none;
+    // }
+
+    // &__links {
+    //   ul {
+    //     flex-wrap: wrap;
+    //     gap: 2em;
+    //     align-items: flex-start;
+
+    //     li {
+    //       min-width: 12em;
+    //     }
+    //   }
+    // }
+  }
+
+  // @media screen and (max-width: 768px) {
+  //   font-size: 0.9em;
+
+  //   &__links {
+  //     padding: 1em;
+  //   }
+  // }
+
+  // @media screen and (max-width: 469px) {
+  //   font-size: 0.85em;
+
+  //   &__links {
+  //     ul {
+  //       li {
+  //         min-width: 10em;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // @media screen and (max-width: 469px) {
+  //   font-size: 0.8em;
+
+  //   &__links {
+  //     ul {
+  //       li {
+  //         min-width: 7.5em;
+  //       }
+  //     }
+  //   }
+  // }
+}

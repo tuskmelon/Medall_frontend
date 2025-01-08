@@ -1,0 +1,84 @@
+.network {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Red Hat Display';
+    padding-bottom: 1.3em;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #3d3d3d;
+
+      span {
+        color: #027cbc;
+      }
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin: 1.3em;
+      width: 55%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    padding: 5em 0;
+    background: url('../../assets/images/skyscraper-bg.jpg') no-repeat center;
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 600;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        136deg,
+        rgba(134, 196, 237, 0.65) 0%,
+        rgba(43, 98, 116, 0.84) 100%
+      );
+    }
+
+    ul {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 3em;
+      flex-wrap: wrap;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 4.5em;
+          height: auto;
+          margin-right: 1em;
+          border: 0.15em solid #ffffff;
+          border-radius: 0.5em;
+          padding: 0.7em;
+        }
+
+        p {
+          width: 9em;
+        }
+      }
+    }
+  }
+}

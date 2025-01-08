@@ -1,0 +1,111 @@
+.test-card {
+  width: 90%;
+  background: #ffffff;
+  border-bottom: 0.0625em solid #b41e85;
+  box-shadow: 0.125em 0.125em 1em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+  padding-bottom: 1em;
+  text-decoration: none;
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  &__thumbnail {
+    border-radius: 0.75em;
+    width: 100%;
+    height: auto;
+  }
+
+  &__details {
+    padding: 0 0.5em;
+
+    h5 {
+      font-size: 1em;
+      font-weight: 700;
+      color: #007cbc;
+      margin: 0.5em 0;
+    }
+  }
+
+  &__description {
+    color: #0e0e0e;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+
+  &:hover {
+    .test-card__info {
+      button {
+        animation: btnBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+          alternate;
+
+        &::before {
+          position: absolute;
+          top: 0.31em;
+          left: -7em;
+          content: 'Add To Cart';
+          white-space: nowrap;
+          color: #007cbc;
+          font-weight: 600;
+          padding: 0.2em 0.8em;
+          animation: slideLeft 0.3s ease-in-out forwards;
+        }
+
+        @keyframes slideLeft {
+          0% {
+            left: 0;
+            opacity: 0;
+          }
+          80% {
+            opacity: 0.2;
+          }
+          100% {
+            left: -7em;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      color: #000000;
+      font-size: 1em;
+      font-weight: 700;
+    }
+
+    button {
+      position: relative;
+      background: linear-gradient(96.84deg, #b41e85 10.6%, #007cbc 80.19%);
+      opacity: 0.8;
+      border-radius: 0.56em;
+      padding: 0.5em;
+      border: none;
+      cursor: pointer;
+      outline: none;
+
+      img {
+        opacity: 1;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__tc {
+    float: right;
+  }
+
+  @media screen and (max-width: 978px) {
+    width: 92%;
+    box-shadow: 0.125em 0.125em 0.3em rgba(0, 0, 0, 0.25);
+  }
+
+  @media screen and (max-width: 432px) {
+    width: 99%;
+  }
+}

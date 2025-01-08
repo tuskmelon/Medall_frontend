@@ -1,0 +1,185 @@
+.packages {
+  position: relative;
+  top: 0;
+  width: 100%;
+  font-family: 'Red Hat Display', sans-serif;
+  margin: 2em 0 0 0;
+  overflow: hidden;
+  // z-index: -2;
+
+  &::before {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    content: '';
+    width: 30%;
+    height: 40%;
+    background: url('../assets/images/large-heart.png');
+    background-size: cover;
+  }
+
+  &__header {
+    text-align: center;
+    color: #383736;
+    font-weight: 700;
+    margin-bottom: 2em;
+
+    h2 {
+      color: #383736;
+      font-size: 2em;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-top: 0.2em;
+      color: #007cbc;
+    }
+  }
+
+  &__cards-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-top: 3em;
+    padding: 2em;
+  }
+
+  &__carousel {
+    width: 100%;
+  }
+
+  &__slide {
+    max-width: 25em;
+  }
+
+  &__card {
+    width: 100%;
+    border-radius: 1em;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    overflow: hidden;
+    border: 0.1em solid #007cbc;
+    background: linear-gradient(
+        312deg,
+        #007cbc -12.99%,
+        rgba(0, 124, 188, 0) 46.42%
+      ),
+      #fff;
+    box-shadow: 0.125em 0.125em 0.7em 0 rgba(0, 0, 0, 0.25);
+
+    img {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  &__card-text-content {
+    
+    padding: 1em 0 1.3em 1em;
+    h4 {
+      font-weight: 400;
+      font-size: 1.25em;
+      line-height: 1;
+    }
+    h5 {
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #007cbc;
+    }
+    ul {
+      list-style-position: outside;
+      margin: 1em 0;
+
+      color: #878787;
+      font-size: 0.875em;
+      padding-left: 1em;
+    }
+    p {
+      color: #b41e85;
+      font-size: 2em;
+      margin: 1em 0;
+      font-weight: 600;
+      margin-bottom: 1em;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1em;
+      color: #b41e85;
+      border: 0.0625em solid #b41e85;
+      border-radius: 0.5em;
+      padding: 0.5em 1.3em;
+      white-space: nowrap;
+      background: #fff6fc;
+    }
+  }
+
+  &__side-image {
+    position: absolute;
+    top: 2em;
+    height: 2em;
+    width: auto;
+    right: 0;
+  }
+
+  @media screen and (max-width: 1314px) {
+    &__cards-container {
+      padding: 1em 0 2em 0;
+    }
+  }
+
+  @media screen and (max-width: 1065px) {
+    &__slide {
+      font-size: 0.9em;
+    }
+
+    &__header {
+      margin-bottom: 0.8em;
+    }
+  }
+
+  @media screen and (max-width: 915px) {
+    &__slide {
+      font-size: 0.8em;
+    }
+
+    &__card-text-content {
+      ul {
+        font-size: 1em;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 1em;
+
+    &__header {
+      font-size: 0.9em;
+    }
+
+    &__cards-container {
+      padding: 0 0 2em 0;
+    }
+  }
+
+  @media screen and (max-width: 545px) {
+    &__header {
+      font-size: 0.8em;
+    }
+  }
+}
+
+// // React-Slick Carousel margin issue resolve
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rupee_sign {
+  font-family: 'Red Hat Display', sans-serif;
+}

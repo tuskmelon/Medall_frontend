@@ -1,0 +1,137 @@
+.pro-card {
+  max-width: 28em;
+  background: #ffffff;
+  box-shadow: 0.25em 0.25em 1.5em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Red Hat Display', sans-serif;
+
+  &__container {
+    padding: 2em 2em 0 2em;
+  }
+
+  h2 {
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #231f20;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      color: #007cbc;
+      font-weight: 700;
+      margin: 0 0.5em;
+    }
+
+    img {
+      width: 1.3em;
+      height: auto;
+    }
+  }
+
+  &__price {
+    margin: 1em 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 1.5em;
+    border-bottom: 0.0625em solid #c1b9b9;
+
+    h3 {
+      color: #b41e85;
+      font-size: 2em;
+    }
+
+    del {
+      margin: 0 1em;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #979797;
+    }
+
+    span {
+      background: #ebebeb;
+      width: 4em;
+      height: 4em;
+      font-size: 1.3em;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #3a4a6c;
+      border-radius: 50%;
+    }
+  }
+
+  &__paying-amount {
+    width: 100%;
+    margin-top: 1.5em;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90.11deg, #f4fbff 0.1%, #e0f5ff 63.56%);
+    font-weight: 700;
+    font-size: 1.1em;
+
+    h3 {
+      color: #383736;
+    }
+    p {
+      color: #b41e85;
+    }
+  }
+
+  &__condition {
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #7a797a;
+    margin: 0.7em 0;
+    padding-right: 1em;
+    align-self: flex-end;
+  }
+
+  &__compare {
+    font-size: 1em;
+    font-weight: 700;
+    color: #007cbc;
+    text-decoration: none;
+    padding-bottom: 0.02em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1em;
+    width: fit-content;
+    margin-bottom: 1em;
+    margin: 0.7em 0 0 2em;
+    align-self: flex-start;
+  }
+
+  &__add-to-cart-button {
+    font-size: 1em;
+    font-weight: 500;
+    color: #ffffff;
+    display: inline-block;
+    margin: 2em 0 1.5em 0;
+    background: linear-gradient(96.84deg, #b41e85 10.6%, #007cbc 80.19%);
+    border-radius: 0.56em;
+    text-decoration: none;
+    width: 90%;
+    text-align: center;
+    padding: 0.8em 0;
+    animation: btnBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+        alternate;
+
+      }
+      @keyframes btnBounce {
+        from {
+          transform: translateY(0.187em);
+        }
+        to {
+          transform: translateY(-0.187em);
+        }
+      }
+}

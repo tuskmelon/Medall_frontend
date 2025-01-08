@@ -1,0 +1,67 @@
+.collapsible-card {
+  border: 0.0625em solid #007cbc;
+  background: #ffffff;
+  padding: 1em;
+  border-radius: 0.1em;
+  margin-bottom: 1em;
+  font-family: 'Red Hat Display';
+
+  span {
+    color: #007cbc;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    font-weight: 700;
+    display: inline-block;
+    color: #b41e85;
+  }
+
+  &__answer {
+    color: #555555;
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+// Styling Collapsible bars
+.Collapsible {
+  .is-closed:after,
+  .is-open:after {
+    width: 1em;
+    height: 1em;
+    font-size: 1.2em;
+    font-weight: 700;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .is-closed:after {
+    content: '>';
+    transform: rotate(90deg);
+  }
+
+  .is-open:after {
+    content: '<';
+    transform: rotate(90deg);
+  }
+}
+.collapsible_span_mark{
+  color: #b41e85!important;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .collapsible-card {
+  h3{
+    font-size: 0.9em !important;
+  }
+  }
+}

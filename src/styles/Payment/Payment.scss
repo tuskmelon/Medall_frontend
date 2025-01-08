@@ -1,0 +1,48 @@
+.payment {
+  position: relative;
+  font-family: 'Red Hat Display';
+
+  &__title {
+    color: #007cbc;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 0.0625em solid #dad4d4;
+  }
+
+  &__payment-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__complete-order-btn {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 400;
+    background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+    border-radius: 0.6em;
+    text-decoration: none;
+    margin-top: 4em;
+    padding: 0.7em 15%;
+    width: 80%;
+    border: none;
+    cursor: pointer;
+  }
+
+  &-loader {
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 2;
+    border-radius: 2em;
+  }
+}

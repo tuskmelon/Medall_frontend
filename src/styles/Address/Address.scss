@@ -1,0 +1,227 @@
+.address {
+  position: relative;
+  font-family: 'Red Hat Display';
+  width: 100%;
+  margin-top: 2.5em;
+  z-index: 8;
+
+  &__header {
+    color: #007cbc;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    margin-top: -2em;
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 2.2em;
+    margin-left: 0.5em;
+  }
+
+  &__main-container {
+    width: 100%;
+    background: linear-gradient(123.13deg, #007cbc 2.02%, #b41e85 97.15%);
+    padding: 0.1em;
+    border-radius: 0.5em;
+    margin-top: 2em;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    form {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      background: #ffffff;
+      border-radius: 0.4em;
+      padding: 0 1em;
+      width: 100%;
+      //   border: 2px solid blue;
+
+      input {
+        color: #555555;
+        font-size: 1em;
+        font-weight: 500;
+        padding: 0.75em 0.5em;
+        border: 0.1em solid #979797;
+        border-radius: 0.25em;
+
+        &:focus {
+          outline: none;
+          border: 0.125em solid #007cbc;
+        }
+      }
+
+      label {
+        width: 100%;
+        padding: 1.5em;
+      }
+    }
+  }
+
+  &__inner-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__title-radio {
+    position: absolute;
+    top: 2.7em;
+    left: 1em;
+    z-index: 99;
+    accent-color: #000000;
+  }
+
+  &__empty-field-msg {
+    position: relative;
+    top: 1em;
+    font-size: 0.7em;
+    font-weight: 400;
+    color: #ff0000;
+  }
+
+  &__form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5em;
+
+    h2 {
+      color: #007cbc;
+      font-size: 1.3em;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    button {
+      padding: 0.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      border-radius: 0.3em;
+      border: 0.14em solid #979797;
+      background: none;
+      color: #b1a7a7;
+      font-size: 0.875em;
+      font-weight: 500;
+      cursor: pointer;
+
+      span {
+        color: #b1a7a7;
+        font-size: 1em;
+        font-weight: 500;
+        margin-right: 0.5em;
+      }
+
+      img {
+        width: 1.5em;
+        height: auto;
+      }
+    }
+  }
+
+  &__detail {
+    width: 100%;
+    margin: 0.5em 0;
+
+    &-half-width {
+      width: 50%;
+      margin: 0.5em 0;
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+  }
+
+  &__form- {
+    filter: blur(0.07em);
+
+    &active {
+      filter: blur(0);
+    }
+    input {
+      pointer-events: none;
+    }
+  }
+
+  &__form-submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+
+    button {
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      font-weight: 500;
+      border-radius: 0.8em;
+      padding: 0.8em 5em;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(123deg, #007cbc 2.02%, #b41e85 97.15%);
+      transition: all 0.5s ease;
+
+      &:active {
+        transform: scale(0.92);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  @media screen and (max-width: 638px) {
+    &__input-group {
+      flex-direction: column;
+      gap: 0;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 552px) {
+    margin-top: 5em;
+  }
+}
+
+.address-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  border-radius: 0.5em;
+  padding: 1em 3em;
+  font-family: 'Red Hat Display';
+  font-weight: 700;
+  font-size: 1.33em;
+  color: #000000;
+  background: #ffffff;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0.5em 1.2em 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0.2em);
+  border: 0.0625em solid rgba(255, 255, 255, 0.18);
+}

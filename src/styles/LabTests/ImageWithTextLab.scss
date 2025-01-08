@@ -1,0 +1,33 @@
+.image-with-text-lab {
+  position: relative;
+  top: 0;
+  padding: 2em;
+  font-family: 'Red Hat Display', sans-serif;
+
+  h1 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    color: #007cbc;
+    margin-bottom: 1em;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    img {
+      width: 35%;
+      min-width: 25em;
+    }
+    p {
+      font-size: 1em;
+      font-weight: 500;
+      color: #6c6c6c;
+      width: 45%;
+      line-height: 1.5;
+      margin-left: 2em;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+.corporate-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  font-family: 'Red Hat Display';
+
+  h1 {
+    color: #007cbc;
+    font-size: 1.33em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+
+  &__sub-title {
+    color: #0b567c;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0.5em;
+  }
+
+  &__form-container {
+    border-radius: 1em;
+    background: #f8f8f8;
+  }
+
+  &__form {
+    padding: 2em 1.5em;
+    min-width: 30em;
+
+    h2 {
+      color: #3d3535;
+      font-size: 1.33em;
+      font-weight: 700;
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__label {
+    margin-top: 1.5em;
+    color: #0b567c;
+    font-size: 1em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  &__input {
+    height: 3em;
+    color: #837777;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 0.5em;
+    border: 0.0625em solid #d3d3d3;
+    background: #ffffff;
+    width: 100%;
+    outline: none;
+    padding: 0 1em;
+
+    // Hide arrow from type number Input tag
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type='number'] {
+      appearance: texfield;
+      -moz-appearance: textfield;
+    }
+  }
+
+  &__error-message {
+    position: relative;
+    top: 0.5em;
+    font-size: 0.7em;
+    font-weight: 400;
+    color: #ff0000;
+    margin-top: 0.1em;
+  }
+
+  &__mobile-number-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #9d9b9b;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 0.5em;
+      height: 3em;
+      border-radius: 0.5em;
+      background-color: #ffffff;
+      border: 0.13em solid #d3d3d3;
+    }
+  }
+
+  &__input--mobile-number-input {
+    width: 18em;
+    border-radius: 0 0.5em 0.5em;
+    border: 0.13em solid #d3d3d3;
+    padding: 0 0 0 1.5em;
+    margin-left: -0.5em;
+    font-size: 1em;
+    color: #837777;
+    outline: none;
+    z-index: 1;
+  }
+
+  &__send-again {
+    color: #7b6a6a;
+    font-size: 0.75em;
+    font-weight: 500;
+    margin-top: 0.5em;
+
+    span {
+      color: #b41e85;
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+
+  &__divider-line-box {
+    text-align: center;
+    position: relative;
+    top: 0;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      position: relative;
+      z-index: 2;
+      color: #dcc;
+      font-size: 0.75em;
+      font-weight: 600;
+      background: #f8f8f8;
+      padding: 0.5em;
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      z-index: 1;
+      border-top: 0.0625em solid #dcc;
+    }
+  }
+
+  &__redirect-link {
+    color: #8a8a8a;
+    font-size: 0.875em;
+    font-weight: 600;
+
+    &--margin {
+      margin: 2em 0 0.5em 0;
+    }
+
+    a {
+      color: #1074b8;
+      font-size: 0.9em;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  &__submit-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+
+    button {
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      font-weight: 500;
+      border-radius: 0.8em;
+      padding: 0.8em 3em;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(123deg, #007cbc 2.02%, #b41e85 97.15%);
+    }
+  }
+}

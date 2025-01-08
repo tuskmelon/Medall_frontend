@@ -1,0 +1,85 @@
+.admin-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  font-family: 'Red Hat Display';
+
+  &__form-container {
+    background: rgb(231, 231, 231);
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    max-width: 20em;
+    h3 {
+      text-align: center;
+      color: #007cbc;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-bottom: 2em;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4em;
+
+    label {
+      margin-bottom: 0.2em;
+      color: #0b567c;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    input {
+      height: 2.5em;
+      color: #414040;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 0 0.5em;
+      border-radius: 0.1em;
+      border: none;
+      outline: none;
+      background: none;
+      min-width: 15em;
+      width: 100%;
+      border-bottom: 0.125em solid #0b567c;
+    }
+  }
+
+  &__input-with-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  &__icon {
+    width: 1.3em;
+    height: 1.3em;
+    margin-right: 0.1em;
+
+    &--size {
+      width: 1.7em;
+      height: 1.7em;
+    }
+  }
+
+  &__login-btn {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 0.3em;
+    padding: 0.5em 1.5em;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(123deg, #007cbc 2.02%, #b41e85 97.15%);
+  }
+}

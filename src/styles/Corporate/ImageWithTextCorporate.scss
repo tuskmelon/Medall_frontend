@@ -1,0 +1,83 @@
+.image-with-text-corporate {
+  font-family: 'Red Hat Display';
+  padding-top: 2em;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin-bottom: 0.5em;
+      width: 65%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: left;
+    margin-top: 2em;
+    background: url('../../assets/images/dots.png') no-repeat center;
+    background-size: 100% 100%;
+    padding: 2em 5%;
+   
+
+    h3 {
+      color: #515050;
+      font-size: 1.33em;
+      font-weight: 700;
+      width: 70%;
+    }
+
+    p {
+      color: #6c6c6c;
+      font-size: 1em;
+      line-height: 1.5;
+      font-weight: 500;
+      width: 60%;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 0.875em;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 1em 4em;
+      background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+      border-radius: 0.5em;
+      color: #ffffff;
+      margin-top: 2.5em;
+      display: inline-block;
+    }
+  }
+
+  &__image {
+    width: 30%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .image-with-text-corporate {
+&__details{
+  flex-direction: column-reverse;
+}
+&__image{
+  width: 100%;
+}
+h3{
+  width: 100%;
+}
+p{
+  width: 100%;
+}
+  }
+}

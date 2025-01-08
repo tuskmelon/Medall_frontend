@@ -1,0 +1,21 @@
+.suggest-tests {
+  font-family: 'Red Hat Display', sans-serif;
+
+  &__heading {
+    font-size: 2em;
+    font-weight: 700;
+    color: #464646;
+    text-align: center;
+    margin: 1em 0;
+
+    span {
+      color: #007cbc;
+    }
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

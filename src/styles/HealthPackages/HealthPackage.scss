@@ -1,0 +1,244 @@
+.health-package {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5%;
+  padding: 2em 5%;
+  margin: 0 auto;
+  max-width: 100em;
+  font-family: 'Red Hat Display';
+  
+
+  &__info-container {
+    width: 50%;
+  }
+
+  &__test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: #231f20;
+      font-size: 2.3em;
+      font-weight: 700;
+
+      span {
+        color: #007cbc;
+      }
+    }
+  }
+
+  &__age-range {
+    font-size: 0.5em;
+    font-weight: 500;
+  }
+
+  &__rating {
+    border-radius: 0.3em;
+    background: #14d076;
+    padding: 0.3em 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+    color: #231f20;
+    font-size: 0.875em;
+    font-weight: 600;
+
+    img {
+      width: 1em;
+      height: auto;
+    }
+  }
+
+  &__description {
+    color: #6c6c6c;
+    font-size: 1em;
+    font-weight: 500;
+    width: 95%;
+    margin-top: 1em;
+    line-height: 1.5;
+    min-width: 18em;
+  }
+
+  &__icon-with-text {
+    border-top: 0.0625em solid #c9c9c9;
+    border-bottom: 0.0625em solid #c9c9c9;
+    padding: 2.5em 0;
+    margin: 1.5em 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5em;
+
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #464646;
+      font-size: 0.875em;
+      font-weight: 500;
+      line-height: 1.3;
+
+      span {
+        background: #007cbc;
+        border-radius: 50%;
+        padding: 0.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.2em;
+        height: 3.2em;
+
+        img {
+          width: 2em;
+          height: auto;
+        }
+      }
+
+      p {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  &__atc-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__add-to-cart-btn {
+    border-radius: 0.3em;
+    border: 0.0625em solid #b51f86;
+    background: #ffecf9;
+    margin: 1em auto;
+    color: #b51f86;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:active {
+      transform: scale(0.92);
+    }
+  }
+
+  &__list-info {
+    margin-top: 2em;
+    h3 {
+      color: #b41e85;
+      font-size: 1.33em;
+      font-weight: 700;
+      margin: 0.5em 0;
+    }
+
+    ul {
+      list-style-position: inside;
+      color: #524c4c;
+      font-size: 1em;
+      font-weight: 500;
+
+      li {
+        margin-top: 0.5em;
+      }
+    }
+  }
+
+  &__parameters {
+    margin-top: 2em;
+
+    h3 {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #b41e85;
+      padding-bottom: 0.02em;
+      width: fit-content;
+      text-decoration: none;
+    }
+  }
+
+  &__parameter-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    ul {
+      margin-right: 2em;
+      width: 40%;
+      h2 {
+        font-size: 1.15em;
+        font-weight: 700;
+        color: #007cbc;
+        margin: 1em 0 0.5em 0;
+      }
+
+      li {
+        color: #b41e85;
+        line-height: 1.5;
+        list-style-position: outside;
+        margin-left: 1em;
+
+        span {
+          font-size: 1em;
+          font-weight: 400;
+          color: #000000;
+        }
+      }
+
+      .health-package__highlighted-point {
+        span {
+          font-weight: 700;
+          color: #b41e85;
+        }
+      }
+    }
+  }
+
+  &__order-details {
+    position: sticky;
+    top: 9.5em;
+  }
+
+  @media screen and (max-width: 1045px) {
+    padding: 1.5em 1em;
+
+    &__info-container {
+      font-size: 0.9em;
+    }
+
+    &__order-details {
+      font-size: 0.9em;
+    }
+
+    &__icon-with-text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .health-package {
+    flex-direction: column-reverse;
+    &__info-container {
+      width: 100%;
+      margin-top: 1.5em;
+    }
+    &__test-header h2 {
+      font-size: 1.5em;
+    }
+    &__description {
+      font-size: 0.9em;
+    }
+    &__order-details {
+      position: relative;
+      top: 0;
+    }
+  }
+}

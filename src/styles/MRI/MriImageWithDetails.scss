@@ -1,0 +1,184 @@
+.mri-image-with-details {
+  font-family: 'Red Hat Display';
+  background: #ecf7ff;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 2em 5%;
+  }
+
+  &__thumbnail {
+    width: 30%;
+    min-width: 18em;
+    height: auto;
+    border-radius: 0.5em;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__scan-info-box {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 0.5em;
+    border: 0.0625em solid #a82589;
+    background: #fafafa;
+    padding: 1.5em 1em;
+
+    h4 {
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__price-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    h4 {
+      color: #555555;
+      font-size: 1em;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 1.6em;
+      font-weight: 700;
+      color: #aa2489;
+
+      span {
+        margin-right: 0.5em;
+        del {
+          color: #938d91;
+          font-size: 0.65em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__conditional-statement {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.3em;
+    font-size: 0.65em;
+    margin-top: 1em;
+    white-space: nowrap;
+  }
+
+  &__title-box {
+    h4 {
+      color: #7c7a7a;
+      font-size: 1em;
+      font-weight: 700;
+    }
+
+    p {
+      color: #1e1919;
+      font-size: 1.6em;
+      font-weight: 600;
+
+      span {
+        color: #aa2489;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__why-us-container {
+    margin-top: 1.5em;
+    h2 {
+      color: #007cbc;
+      font-size: 1.33em;
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
+      list-style: none;
+
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1em;
+        color: #292929;
+        font-size: 0.875em;
+        font-weight: 600;
+        line-height: 1.5;
+
+        span {
+          background: #ffffff;
+          padding: 0.5em;
+          border-radius: 0.8em;
+
+          img {
+            width: 2em;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .mri-image-with-details__container {
+    flex-flow: column !important;
+  }
+  .mri__details {
+    flex-flow: column;
+    width: 100%;
+  }
+  .mri__why-this-mri {
+    width: 90% !important;
+  }
+  .mri__book-call-form-container {
+    position: static !important;
+    width: 95% !important;
+  }
+  .mri-image-with-details__title-box p {
+    font-size: 1em !important;
+  }
+
+ 
+}
+
+@media only screen and (max-width: 900px) {
+  .mri-image-with-details__container {
+    flex-flow: column !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .mri__details {
+    flex-flow: column;
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .mri__why-this-mri {
+    width: 90% !important;
+  }
+  .mri__book-call-form-container {
+    position: static !important;
+    width: 80%;
+  }
+
+ 
+}

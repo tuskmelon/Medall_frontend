@@ -1,0 +1,49 @@
+.news-card {
+  max-width: 25em;
+  padding: 1em;
+
+  &__card-box {
+    width: 100%;
+    border-radius: 0.75em;
+    background: #ffffff;
+    box-shadow: 0.125em 0.125em 1em rgba(0, 0, 0, 0.25);
+    border-radius: 0.75em;
+    padding-bottom: 0.7em;
+
+    img {
+      object-fit: cover;
+      border-radius: 0.75em 0.75em 0 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__card-text-content {
+    padding: 0 0.5em;
+
+    h3 {
+      margin: 0.5em 0;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #007cbc;
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 600;
+      color: #181818;
+      margin-bottom: 1em;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1em;
+      color: #b41e85;
+
+      &:hover {
+        color: #007cbc;
+      }
+    }
+  }
+}

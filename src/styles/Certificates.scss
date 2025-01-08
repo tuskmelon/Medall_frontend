@@ -1,0 +1,129 @@
+.certificate {
+  margin-bottom: 3em;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  &__header {
+    margin-left: 10%;
+    font-size: 2.3em;
+    font-weight: 700;
+    color: #464646;
+    margin-bottom: 1em;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    width: 30%;
+
+    p {
+      font-size: 1.75em;
+      font-weight: 600;
+      color: #464646;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
+
+      img {
+        width: 1.5em;
+        height: auto;
+      }
+
+      span {
+        color: #007cbc;
+        margin: 0.3em;
+      }
+    }
+
+    img {
+      width: 12em;
+      height: auto;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+    width: 40%;
+    min-width: 27em;
+    padding: 0 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 60%;
+      height: 20%;
+      z-index: -1;
+      border-radius: 0.75em;
+    }
+
+    &::before {
+      top: 0;
+      left: -0.15em;
+      background: linear-gradient(
+        180deg,
+        #b41e85 0%,
+        rgba(180, 30, 133, 0) 100%
+      );
+    }
+
+    &:after {
+      right: -0.15em;
+      bottom: 0;
+      background: linear-gradient(
+        360deg,
+        #b41e85 0%,
+        rgba(180, 30, 133, 0) 85%
+      );
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+
+      border-radius: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 790px) {
+    &__header {
+      margin-left: 1em;
+      margin-bottom: 1em;
+      font-size: 1.75em;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__info {
+      margin-right: 0;
+
+      p {
+        font-size: 1.5em;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__image-container {
+      min-width: unset;
+      width: 85%;
+    }
+  }
+}

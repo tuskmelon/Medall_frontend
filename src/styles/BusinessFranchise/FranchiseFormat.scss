@@ -1,0 +1,146 @@
+.franchise-format {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 7.6em;
+    height: 7.6em;
+    border-radius: 50%;
+    background: #b41e85;
+    opacity: 0.38;
+    z-index: -1;
+    filter: blur(3em);
+  }
+
+  &::before {
+    top: 45%;
+    right: 2%;
+  }
+
+  &::after {
+    bottom: 20%;
+    left: 2%;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #464646;
+padding-bottom: 1em;
+      span {
+        color: #007cbc;
+      }
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 500;
+      color: #6c6c6c;
+      margin: 1em 0;
+      width: 60%;
+    }
+  }
+
+  &__table-container {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.0625em solid #a2ebeb;
+    // border-radius: 1em;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 2em;
+      content: '';
+      width: 20em;
+      height: 20em;
+      background: url('../../assets/images/medall-heart-big.png') no-repeat
+        center;
+      background-size: 100% 100%;
+    }
+
+    table {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+      //   border: 0.0625em solid #a2ebeb;
+      // border-collapse: collapse;
+      // border-radius: 1em;
+      // background-color: #ffffff;
+
+      thead {
+        tr {
+          th {
+            width: 2em;
+            padding: 2em 1em;
+            color: #3e3e3e;
+            font-size: 1.1em;
+            font-style: normal;
+            font-weight: 500;
+            // border: 2px solid blue;
+            border: 0.0625em solid #a2ebeb;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 2em 1em;
+            font-size: 1em;
+            color: #464444;
+            font-weight: 400;
+            border: 0.0625em solid #a2ebeb;
+          }
+
+          td:nth-child(1) {
+            color: #3e3e3e;
+            font-size: 1em;
+            font-weight: 500;
+          }
+        }
+        // tr:nth-child(n + 3) {
+        //   td {
+        //     border-bottom-style: hidden;
+        //   }
+        // }
+      }
+    }
+  }
+
+  //   &__top-left,
+  //   &__top-right,
+  //   &__bottom-left,
+  //   &__bottom-right {
+  //     border-style: solid;
+  //     border-width: 0.0625em;
+  //     border-color: #a2ebeb;
+  //   }
+
+  //   &__top-left {
+  //     border-top-left-radius: 0.0625em;
+  //   }
+  //   &__top-right {
+  //     border-top-right-radius: 0.0625em;
+  //   }
+  //   &__bottom-left {
+  //     border-bottom-left-radius: 0.0625em;
+  //   }
+  //   &__bottom-right {
+  //     border-bottom-right-radius: 0.0625em;
+  //   }
+}

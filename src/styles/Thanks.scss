@@ -1,0 +1,65 @@
+.thanks {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  font-family: 'Red Hat Display';
+
+  &__lottie {
+    width: 50%;
+    min-width: 17em;
+  }
+
+  &__gradient-text {
+    width: 26%;
+    min-width: 17em;
+    margin-top: 1em;
+  }
+
+  p {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 1em;
+  }
+
+  &__back-button {
+    font-size: 1em;
+    font-size: 500;
+    margin-top: 2em;
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    background: rgb(0, 124, 188);
+    background: linear-gradient(
+      140deg,
+      rgba(0, 124, 188, 1) 0%,
+      rgba(180, 30, 133, 1) 100%
+    );
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  @media screen and (max-width: 567px) {
+    &__lottie {
+      min-width: 14em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    &__back-button {
+      font-size: 0.9em;
+      margin-top: 1em;
+    }
+  }
+}

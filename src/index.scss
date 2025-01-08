@@ -1,0 +1,74 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Red+Hat+Display:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+// Adding styling to browser vertical scroll bar
+/* width */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.1em grey;
+  border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #88c5f3 0%, #da4eb9 100%);
+  border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #008cff;
+}
+
+// Active link styling
+.active-link {
+  color: #b41e85;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: local('Avenir'),
+    url('./assets/fonts/avenir/AvenirLTStd-Book.otf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NB International';
+  src: local('NB International'),
+    url('./assets/fonts/nbInternational/NB-International-Regular.otf')
+      format('truetype');
+  font-display: swap;
+}

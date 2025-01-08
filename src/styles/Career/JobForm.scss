@@ -1,0 +1,250 @@
+.job-form {
+  position: relative;
+  top: 0;
+  font-family: 'Red Hat Display';
+  overflow: hidden;
+  padding-top: 3.5em;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: -2%;
+    bottom: 20%;
+    width: 7.6em;
+    height: 7.6em;
+    border-radius: 50%;
+    background: #b41e85;
+    opacity: 0.38;
+    filter: blur(3em);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #3d3d3d;
+
+      span {
+        color: #027cbc;
+      }
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin-top: 1.3em;
+      width: 80%;
+    }
+  }
+
+  &__container {
+    padding: 2em 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__inner-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+    background: #edf8ff;
+    box-shadow: 0.25em 0.25em 3.125em rgba(0, 0, 0, 0.04);
+    border-radius: 1em;
+    padding: 2em 4em;
+    // width: 100%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 4em;
+      height: 6em;
+      // background: url('../../assets/images/leaf.svg') no-repeat center;
+      background-size: 100% 100%;
+      z-index: -1;
+    }
+
+    &::before {
+      top: 5%;
+      left: -2.1em;
+      transform: rotate(290deg);
+    }
+
+    &::after {
+      top: 80%;
+      right: -2.4em;
+      transform: rotate(17deg);
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: 600;
+
+    label {
+      color: #272727;
+      margin-bottom: 0.2em;
+    }
+
+    input {
+      font-family: 'Red Hat Display';
+      background: #ffffff;
+      border-radius: 0.5em;
+      padding: 0.5em 1em;
+      border: none;
+      outline: none;
+      color: #007cbc;
+      width: 100%;
+      width: 28em;
+      height: 2.75em;
+      font-size: 0.875em;
+      font-weight: 600;
+
+      &::placeholder {
+        color: #9e9e9e;
+        font-size: 0.875em;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__upload-file-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background: #ffffff;
+    outline: none;
+    border: none;
+    text-align: left;
+    line-height: 2;
+    color: #9e9e9e;
+    font-size: 0.87em;
+    cursor: pointer;
+
+    p {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__submit-button {
+    font-family: 'Red Hat Display';
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.8em 3.5em;
+    color: #ffffff;
+    background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+    border-radius: 0.5em;
+    outline: none;
+    border: none;
+    margin-top: 2em;
+    cursor: pointer;
+    box-shadow: 0px 0.55em 2em #5051519e;
+    animation: btnBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+      alternate;
+
+    &:hover {
+      animation: none;
+    }
+  }
+
+  .job-form__side-image img {
+    border-radius: 3em;
+  }
+
+  &__selected-file {
+    p {
+      padding: 1em;
+      font-size: 1em;
+      font-weight: 600;
+      color: #007cbc;
+
+      span {
+        color: #272727;
+      }
+    }
+  }
+
+  &__resume-uploader-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0.5em 2em 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0.3em);
+
+    span {
+      color: #007cbc;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+  .job-form__inner-container{
+    flex-flow: column;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .job-form__input-group input{
+    width: 100%;
+  }
+
+  .job-form .job-form__side-image img{
+    width: 100%;
+  }
+
+  .job-form__container{
+    padding: 1em 3%;
+  }
+
+  .job_application_form{
+    width: 85%;
+    margin-top: 2em;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+ 
+
+  .job_application_form{
+    width: 98%;
+    margin-top: 2em;
+  }
+}
+

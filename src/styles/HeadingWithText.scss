@@ -1,0 +1,30 @@
+.heading-with-content {
+  position: relative;
+  top: 0;
+  text-align: center;
+  padding: 4em 5% 3em 5%;
+  font-family: 'Red Hat Display', sans-serif;
+
+  h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #b41e85;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #6c6c6c;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9em;
+    padding-top: 2em;
+  }
+
+  @media screen and (max-width: 650px) {
+    font-size: 0.875em;
+  }
+}

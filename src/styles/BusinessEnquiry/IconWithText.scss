@@ -1,0 +1,61 @@
+.icon-with-text {
+  width: 100%;
+  font-family: 'Red Hat Display';
+  color: #ffffff;
+  background: #38759e;
+  overflow: hidden;
+  padding: 2em;
+
+  &__carousel {
+    width: 100%;
+  }
+
+  &__slide-container {
+    background: #38759e;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35%;
+    width: 100%;
+    padding: 2em 0;
+  }
+
+  &__text-details {
+    h1 {
+      font-size: 2.3em;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.4em;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-top: 1.5em;
+      width: 13em;
+    }
+  }
+
+  &__icon {
+    width: 14em;
+    height: auto;
+  }
+
+  // Carousel styling
+  .slick-dots {
+    li {
+      width: 0.5em;
+
+      button:before {
+        color: #898989;
+        font-size: 8px;
+      }
+    }
+
+    li.slick-active button:before {
+      color: #ffffff;
+    }
+  }
+}

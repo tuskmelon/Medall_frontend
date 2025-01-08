@@ -1,0 +1,177 @@
+.footer {
+  position: relative;
+  padding: 2em 0;
+  background: #080e18;
+  color: #ebebeb;
+  // margin-top: 2em;
+  font-family: 'Avenir';
+  // z-index: -2;
+
+  &__informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 0 7%;
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.1em;
+      color: #e6e6e6;
+      margin: 0.7em 0;
+    }
+
+    p {
+      font-size: 0.875em;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  &__content {
+    width: 90%;
+    padding: 3em 0 0 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    border-top: 0.0625em solid #686868;
+  }
+
+  &__company-details {
+    width: 30%;
+    min-width: 18em;
+    line-height: 1.5;
+
+    img {
+      width: 8em;
+      height: auto;
+      margin-bottom: 1.5em;
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__app-link {
+    margin-top: 1.5em;
+
+    p {
+      font-size: 1em;
+      margin: 1em 0;
+    }
+  }
+
+  &__store-logo {
+    a {
+      text-decoration: none;
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+
+      img {
+        width: 5.8em;
+        height: auto;
+      }
+    }
+  }
+
+  &__quick-links {
+    width: 65%;
+    font-size: 1em;
+    padding-top: 4.4em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5em;
+    white-space: nowrap;
+
+    ul {
+      li {
+        list-style: none;
+        font-weight: 400;
+        margin-bottom: 1em;
+
+        a,
+        button {
+          text-decoration: none;
+          color: #ffffff;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: #008cff;
+          }
+        }
+
+        button {
+          font-size: 1em;
+          font-weight: 400;
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 945px) {
+    &__informations {
+      h2 {
+        font-size: 1em;
+      }
+
+      p {
+        font-size: 0.875em;
+      }
+    }
+
+    &__quick-links {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    &__company-details {
+      width: 100%;
+    }
+
+    &__quick-links {
+      padding-top: 1.5em;
+    }
+  }
+
+  @media screen and (max-width: 898px) {
+    padding-bottom: 10em;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9em;
+  }
+
+  @media screen and (max-width: 350px) {
+    &__company-details {
+      width: 15em;
+    }
+  }
+}
+
+.Footer_Logo{
+  text-decoration: none;
+  color: white;
+  display:flex;
+  margin-top:6px;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  padding-top: 15px;
+  max-width: 1380px;
+  border-top: 0.0625em solid #686868;
+  margin: auto;
+}

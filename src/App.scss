@@ -1,0 +1,95 @@
+.app {
+  position: relative;
+  top: 0;
+  height: 100%;
+  font-family: "Red Hat Display";
+
+  &__location-selector-pointer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    p {
+      position: relative;
+      top: -10%;
+      left: 20%;
+      font-size: 2em;
+      font-weight: 700;
+      color: #ffffff;
+
+      span {
+        position: relative;
+        color: #47baf3;
+        font-size: 2.3em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        left: -0.2em;
+
+        img {
+          position: relative;
+          top: 0.2em;
+          width: 1em;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  // Button Bounce Animation
+  &__arrow {
+    position: relative;
+    width: 30%;
+    position: relative;
+    top: 5%;
+    left: -12%;
+
+    img {
+      transform: rotate(235deg);
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// React dropdown stlying
+.react-dropdown-select-dropdown {
+  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+ 
+
+ 
+
+// Button Bounce Animation
+@keyframes btnBounce {
+  from {
+    transform: translateY(0.187em);
+  }
+
+  to {
+    transform: translateY(-0.187em);
+  }
+}
+
+@keyframes backgroundChange {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+// Active link styling
+.active-link {
+  color: #b41e85;
+}

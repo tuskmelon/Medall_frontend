@@ -1,0 +1,78 @@
+.all-tests {
+  width: 100%;
+
+  &__top-heading {
+    font-size: 2em;
+    font-weight: 700;
+    color: #007cbc;
+    margin-top: 1em;
+    padding: 0 8.9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 8.9%;
+    width: 100%;
+    font-family: 'Red Hat Display', sans-serif;
+
+    h1 {
+      color: #b41e85;
+    }
+  }
+
+  &__price-filter {
+    padding: 0.5em 1em;
+    font-size: 0.5em;
+    font-weight: 600;
+    color: #7a797a;
+    border: 0.0625em solid #7a797a;
+    border-radius: 0.5em;
+    white-space: nowrap;
+    margin-left: 1em;
+
+    select {
+      font-size: 1em;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      color: #7a797a;
+      cursor: pointer;
+    }
+  }
+
+  &__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2em;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &__top-heading {
+      font-size: 1.8em;
+      padding: 0 1.33em;
+    }
+
+    &__card-container {
+      padding-top: 1em;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__top-heading {
+      font-size: 1.5em;
+    }
+  }
+
+  @media screen and (max-width: 608px) {
+    &__top-heading {
+      font-size: 1.33em;
+      padding: 0 1em;
+    }
+  }
+}

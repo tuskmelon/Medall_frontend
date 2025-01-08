@@ -1,0 +1,117 @@
+.sample-collection {
+  font-family: 'Red Hat Display';
+  padding: 3.5em 5% 2em 5%;
+
+  &__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 2em 0;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 600;
+      color: #464646;
+
+      span {
+        color: #b41e85;
+      }
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 500;
+      color: #6c6c6c;
+    }
+  }
+
+  &__steps-container {
+    max-width: 60em;
+    margin: 0 auto;
+  }
+
+  &__steps {
+    position: relative;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before,
+    &:nth-child(even)::before {
+      position: absolute;
+      content: '';
+      width: 4em;
+      height: 3em;
+      background: url('../assets//icons/arc-arrow.svg') no-repeat;
+      background-size: 100% 100%;
+    }
+
+    &::before {
+      top: -0.4em;
+      left: -0.9em;
+    }
+
+    &:nth-child(even)::before {
+      top: -0.4em;
+      left: 94.9%;
+      transform: rotate(89deg);
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 700;
+      color: #464646;
+      height: 4em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 3em;
+      margin-left: -2em;
+      z-index: -1;
+      border-radius: 0 2em 2em 0;
+      background: #eaf4fa;
+    }
+
+    &:nth-child(odd) {
+      justify-content: flex-start;
+    }
+
+    &:nth-child(even) {
+      justify-content: flex-end;
+      .sample-collection__step-number {
+        order: 2;
+      }
+
+      p {
+        margin-right: -1em;
+        border-radius: 2em 0 0 2em;
+      }
+    }
+  }
+
+  &__step-number {
+    text-align: center;
+    width: 5.5em;
+    height: 5.5em;
+    border-radius: 50%;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.5em;
+    color: #ffffff;
+    background: #bfd4db;
+
+    span {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(123.13deg, #007cbc 2.02%, #b41e85 97.15%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

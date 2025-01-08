@@ -1,0 +1,203 @@
+.blood-test {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10%;
+  padding: 2em 5%;
+  margin: 0 auto;
+  max-width: 100em;
+  font-family: 'Red Hat Display';
+
+  &__info-container {
+    width: 50%;
+  }
+
+  &__test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: #231f20;
+      font-size: 2em;
+      font-weight: 700;
+
+      span {
+        color: #007cbc;
+      }
+    }
+  }
+
+  &__rating {
+    border-radius: 0.3em;
+    background: #14d076;
+    padding: 0.3em 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+    color: #231f20;
+    font-size: 0.875em;
+    font-weight: 600;
+
+    img {
+      width: 1em;
+      height: auto;
+    }
+  }
+
+  &__alternate-name {
+    color: #231f20;
+    font-size: 0.875em;
+    font-weight: 500;
+    span {
+      color: #007cbc;
+    }
+  }
+
+  &__description {
+    margin: 1em 0;
+    color: #6c6c6c;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  &__icon-with-text {
+    border-top: 0.0625em solid #c9c9c9;
+    border-bottom: 0.0625em solid #c9c9c9;
+    padding: 2.5em 0;
+    margin: 1.5em 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5em;
+
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #464646;
+      font-size: 0.875em;
+      font-weight: 500;
+      line-height: 1.3;
+
+      span {
+        background: #007cbc;
+        border-radius: 50%;
+        padding: 0.3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.2em;
+        height: 3.2em;
+
+        img {
+          width: 2em;
+          height: auto;
+        }
+      }
+
+      p {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  &__book-now-btn {
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    padding: 0.65em 3.5em;
+    margin-top: 2.5em;
+    color: #ffffff;
+    background: linear-gradient(97deg, #b41e85 10.6%, #007cbc 80.19%);
+
+    transition: all 0.5s ease;
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__atc-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__add-to-cart-btn {
+    border-radius: 0.3em;
+    border: 0.0625em solid #b51f86;
+    background: #ffecf9;
+    margin: 1em auto;
+    color: #b51f86;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em 0;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:active {
+      transform: scale(0.92);
+    }
+  }
+
+  &__list-info {
+    margin-top: 2em;
+    h3 {
+      color: #b41e85;
+      font-size: 1.33em;
+      font-weight: 700;
+      margin: 0.5em 0;
+    }
+
+    ul {
+      list-style-position: inside;
+      color: #524c4c;
+      font-size: 1em;
+      font-weight: 500;
+
+      li {
+        margin-top: 0.5em;
+      }
+    }
+  }
+
+  &__order-details {
+    position: sticky;
+    top: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .blood-test {
+    flex-direction: column-reverse;
+    &__order-details {
+      position: relative;
+    }
+
+    &__info-container {
+      width: 100%;
+    }
+    &__book-now-btn {
+      display: none;
+    }
+    &__icon-with-text {
+      gap: 0.5em;
+    }
+    &__test-header {
+      padding-top: 2em;
+
+      h2 {
+        font-size: 1.6em;
+      }
+    }
+  }
+}

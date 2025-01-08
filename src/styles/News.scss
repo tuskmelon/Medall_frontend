@@ -1,0 +1,49 @@
+.news {
+  position: relative;
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 2em 0;
+
+  &::before {
+    position: absolute;
+    top: 15%;
+    content: '';
+    width: 35%;
+    min-width: 17em;
+    height: 80%;
+    background: #def4ff;
+    border-radius: 1em 6em 13em 9em;
+  }
+
+  &__heading {
+    font-size: 2em;
+    font-weight: 700;
+    color: #464646;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  &__carousel-container {
+    padding: 0 5%;
+    width: 100%;
+  }
+
+  &__carousel {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1050px) {
+    &__carousel-container {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 968px) {
+    font-size: 0.9em;
+  }
+
+  @media screen and (max-width: 618px) {
+    &__heading {
+      margin-bottom: 1.3em;
+    }
+  }
+}

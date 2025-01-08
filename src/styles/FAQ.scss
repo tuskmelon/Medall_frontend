@@ -1,0 +1,62 @@
+.faq {
+  font-family: 'Red Hat Display';
+  width: fit-content;
+
+  &__container {
+    width: 100%;
+
+    h2 {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #007cbc;
+      margin: 2em 0 1em 0;
+    }
+  }
+
+  &__collapsible-bar {
+    color: #007cbc;
+    padding: 0.8em 1em;
+    margin-bottom: 1em;
+    border-radius: 0.33em;
+    cursor: pointer;
+    border: 0.03em solid #c0c0c0;
+
+    span {
+      width: 100%;
+      display: inline-block;
+      font-size: 1em;
+      font-weight: 500;
+    }
+  }
+
+  &__answer {
+    margin-top: 1em;
+    font-weight: 400;
+    font-size: 0.87em;
+    color: #626262;
+    // font-family: 'Poppins';
+  }
+}
+
+// Styling Collapsible bars
+.Collapsible {
+  .is-closed:after,
+  .is-open:after {
+    width: 1em;
+    height: 1em;
+    font-size: 1.2em;
+    font-weight: 700;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .is-closed:after {
+    content: '+';
+  }
+
+  .is-open:after {
+    content: '-';
+  }
+}

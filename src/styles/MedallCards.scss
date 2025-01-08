@@ -1,0 +1,269 @@
+.cards {
+  position: relative;
+  top: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  padding: 2em;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    opacity: 0.38;
+    filter: blur(3.2em);
+  }
+
+  &:before {
+    top: 10%;
+    left: 3%;
+    background: #007cbc;
+  }
+
+  &:after {
+    right: 5%;
+    bottom: 0;
+    background: #b41e85;
+  }
+
+  &__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 2em;
+      color: #464646;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1em;
+      font-weight: 400;
+      margin-top: 0.5em;
+      width: 60%;
+      color: #6c6c6c;
+    }
+  }
+
+  &__details {
+    position: relative;
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    &:before {
+      position: absolute;
+      content: '';
+      margin: 0 auto;
+      width: 35vw;
+      height: 35vw;
+      border-radius: 50%;
+      background: #edf7fe;
+    }
+  }
+
+  &__card {
+    position: relative;
+    max-width: 16em;
+    padding: 1.2em 0.8em;
+    background: #ffffff;
+    border: 1.04492px solid #ffc6ed;
+    border-radius: 16.7187px;
+    margin-bottom: 3em;
+    color: #000000;
+    font-size: 0.95em;
+    font-weight: 600;
+    z-index: 8;
+    filter: drop-shadow(0.125em 0.15em 1.25em rgba(0, 0, 0, 0.25));
+
+    img {
+      width: 2em;
+      height: 2em;
+      padding: 0.5em;
+      border-radius: 50%;
+      box-sizing: content-box;
+      background: linear-gradient(135deg, #e2e1e6 14.94%, #ffffff 73.19%);
+    }
+  }
+
+  &__mid-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30%;
+    overflow: hidden;
+    background: #daecfc;
+
+    &:after {
+      content: '';
+      z-index: 1;
+      display: block;
+      background: #daecfc;
+      border-radius: 50%;
+      padding-bottom: 100%;
+    }
+
+    &:before {
+      content: '';
+      z-index: 1;
+      display: block;
+      background: #daecfc;
+      border-radius: 50%;
+      padding-bottom: 100%;
+    }
+
+    img {
+      position: absolute;
+      z-index: 8;
+      max-width: 28em;
+      width: 100%;
+    }
+  }
+
+  &__first-column {
+    .cards__card:nth-child(2) {
+      position: relative;
+      left: -5em;
+    }
+  }
+
+  &__last-column {
+    .cards__card:nth-child(2) {
+      position: relative;
+      left: 5em;
+    }
+  }
+
+  @media screen and (max-width: 1210px) {
+    &__details {
+      justify-content: center;
+      gap: 1.5em;
+      margin-top: 2.3em;
+
+      &::before {
+        min-width: 24em;
+        min-height: 24em;
+      }
+    }
+
+    &__header {
+      p {
+        min-width: 46em;
+      }
+    }
+
+    &__card {
+      max-width: 15em;
+      font-size: 0.9em;
+    }
+
+    &__mid-image {
+      min-width: 20em;
+    }
+  }
+
+  @media screen and (max-width: 1003px) {
+    &__card {
+      max-width: 14em;
+      font-size: 0.85em;
+      padding: 0.5em;
+      border-radius: 1em;
+    }
+
+    &__mid-image {
+      min-width: 18em;
+    }
+
+    &__details {
+      gap: 1em;
+
+      &::before {
+        min-width: 22em;
+        min-height: 22em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 884px) {
+    &__card {
+      max-width: 12em;
+      font-size: 0.8em;
+    }
+
+    &__mid-image {
+      min-width: 16em;
+    }
+
+    &__header {
+      font-size: 0.8em;
+      p {
+        min-width: unset;
+        width: 90%;
+      }
+    }
+
+    &__details {
+      &::before {
+        min-width: 20em;
+        min-height: 20em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 772px) {
+    &__card {
+      font-size: 0.75em;
+      margin-bottom: 1.8em;
+
+      img {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+
+    &__mid-image {
+      min-width: 14em;
+    }
+
+    &__details {
+      &::before {
+        min-width: 18em;
+        min-height: 18em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 690px) {
+    &__details {
+      gap: 0;
+    }
+  }
+
+  @media screen and (max-width: 655px) {
+    &__first-column {
+      .cards__card:nth-child(2) {
+        left: -3em;
+      }
+    }
+
+    &__last-column {
+      .cards__card:nth-child(2) {
+        left: 3em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 610px) {
+    display: none;
+  }
+}

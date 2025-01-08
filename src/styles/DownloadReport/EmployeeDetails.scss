@@ -1,0 +1,26 @@
+.employee-detail {
+  padding: 2em 5%;
+  position: relative;
+  font-family: 'Red Hat Display';
+
+  h2 {
+    color: #007cbc;
+    font-size: 1.33em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+
+  &__parent-loader {
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+    font-size: 2em;
+    font-weight: 600;
+    color: #000000;
+  }
+}

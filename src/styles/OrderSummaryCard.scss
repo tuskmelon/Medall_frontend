@@ -1,0 +1,144 @@
+.order-sum-card {
+  border-radius: 0.75em;
+  border: 0.0625em solid #007cbc;
+  background: #fff;
+  box-shadow: 0.25em 0.25em 1em 0 rgba(135, 127, 127, 0.25);
+  font-family: 'Red Hat Display';
+  max-width: 32em;
+
+  &__header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.062em solid #d3d3d3;
+
+    h2 {
+      color: #007cbc;
+      font-size: 1.33em;
+      font-weight: 700;
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.5em;
+      height: 3.5em;
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 50%;
+      text-align: center;
+      background: linear-gradient(123deg, #007cbc 2.02%, #b41e85 97.15%);
+
+      span {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__price-info {
+    padding-top: 0.5em;
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5em 1em;
+      width: 100%;
+
+      span {
+        font-size: 1em;
+      }
+      span:nth-child(1) {
+        color: #231f20;
+        font-weight: 600;
+      }
+
+      span:nth-child(2) {
+        position: relative;
+        top: 0;
+        color: #000000;
+        font-weight: 700;
+
+        span {
+          position: absolute;
+          bottom: 0.59em;
+          left: -0.3em;
+          transform: rotate(194deg);
+          width: 100%;
+          height: 0.08em;
+          background: #b41e85;
+        }
+      }
+    }
+  }
+
+  &__final-amount-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin-top: 2em;
+
+    h3 {
+      color: #383736;
+      font-size: 1.33em;
+      font-weight: 700;
+    }
+
+    div {
+      p {
+        color: #7a797a;
+        font-size: 0.65em;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__final-amount {
+    color: #b41e85;
+    font-size: 1.33em;
+    font-weight: 700;
+  }
+
+  &__test-not-available {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+
+    button {
+      // width: 48%;
+      width: 100%;
+      font-size: 1em;
+      font-weight: 500;
+      border: none;
+      border-radius: 0.5em;
+      cursor: pointer;
+      padding: 1em 0;
+      transition: all 0.5s ease;
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      // &:nth-child(1) {
+      //   color: #ffffff;
+      //   background: linear-gradient(97deg, #b41e85 10.6%, #007cbc 80.19%);
+      // }
+
+      &:nth-child(1) {
+        color: #b51f86;
+        border: 0.0625em solid #b51f86;
+        background: #ffecf9;
+      }
+    }
+  }
+}

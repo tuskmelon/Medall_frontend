@@ -1,0 +1,44 @@
+.why-pro {
+  position: relative;
+  font-family: 'Red Hat Display', sans-serif;
+
+  &::before {
+    position: absolute;
+    top: 30%;
+    content: '';
+    right: 0;
+    width: 7em;
+    height: 7em;
+    background: #b41e85;
+    opacity: 0.38;
+    filter: blur(3em);
+  }
+
+  h2 {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #b41e85;
+    margin: 2em 0 1em 0;
+  }
+
+  ul {
+    list-style-position: inside;
+    line-height: 2;
+
+    li {
+      color: #6c6c6c;
+      font-size: 1em;
+      font-weight: 500;
+    }
+  }
+  a {
+    display: inline-block;
+    background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+    border-radius: 0.6em;
+    padding: 0.5em 3.5em;
+    text-decoration: none;
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 1.3em;
+  }
+}

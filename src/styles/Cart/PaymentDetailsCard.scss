@@ -1,0 +1,104 @@
+.payment-card {
+  position: relative;
+  width: 100%;
+  font-family: 'Red Hat Display';
+  background: #ffffff;
+  box-shadow: 0 0.37em 1.25em rgba(0, 124, 188, 0.25);
+  border-radius: 0.76em;
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    padding: 1em 0;
+    border-radius: 0.75em 0.75em 0 0;
+    background: #007cbc;
+  }
+
+  &__purchased-items {
+    padding: 1em;
+    border-bottom: 0.0625em solid #e8e8e8;
+
+    ul {
+      padding-bottom: 1em;
+
+      li {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.5em;
+        color: #413e3f;
+        font-size: 1.04em;
+        font-weight: 600;
+        width: 100%;
+
+        p:nth-child(1) {
+          width: 70%;
+          color: #878383;
+          font-size: 1em;
+        }
+        p:nth-child(2) {
+          color: #000000;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__mrp {
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    color: #000000;
+
+    p:nth-child(1) {
+      font-weight: 600;
+    }
+    p:nth-child(2) {
+      font-weight: 700;
+    }
+  }
+
+  &__discount {
+    font-size: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: #0ba448;
+      font-weight: 700;
+    }
+    p:nth-child(1) {
+      line-height: 1;
+      font-size: 1.1em;
+      span {
+        color: #000000;
+        font-size: 0.75em;
+      }
+    }
+  }
+
+  &__total-amount {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em;
+    margin-top: 2em;
+    border-top: 0.0625em solid #525252;
+
+    p {
+      color: #000000;
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+  }
+}

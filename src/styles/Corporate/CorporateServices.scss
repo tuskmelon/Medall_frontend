@@ -1,0 +1,231 @@
+.corporate-services {
+  position: relative;
+  top: 0;
+  padding-top: 2em;
+  font-family: 'Red Hat Display';
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    top: 65%;
+    left: 0%;
+    content: '';
+    width: 7.6em;
+    height: 7.6em;
+    border-radius: 50%;
+    background: #b41e85;
+    opacity: 0.38;
+    filter: blur(3.3em);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Red Hat Display';
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #3d3d3d;
+
+      span {
+        color: #027cbc;
+      }
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin: 1.3em;
+      width: 75%;
+    }
+  }
+
+  &__perks-container {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5em;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+
+  &__perk-box {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 2em;
+    width: 9em;
+    height: 9em;
+    border-radius: 0.75em;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1em;
+    border: 0.0625em solid #c5c5c5;
+    background: #fff;
+    box-shadow: 0.68em 0.5em 2em 0 rgba(214, 214, 214, 0.25);
+
+    img {
+      width: 2.5em;
+      height: auto;
+    }
+
+    p {
+      margin-top: 1em;
+      background: linear-gradient(107deg, #a82589 0%, #5153a4 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 0.9em;
+      font-weight: 500;
+      letter-spacing: 0.03;
+    }
+  }
+
+  &__active-perk {
+    position: absolute;
+    content: '';
+    width: 9.5em;
+    height: 9.5em;
+    z-index: -1;
+    background: url('../../assets/icons/gradient-rectangle.png') no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: #f8f8f8;
+    filter: drop-shadow(0.5em 0.5em 2em rgba(102, 102, 102, 0.25));
+  }
+
+  &__inactive-perk {
+    position: absolute;
+    content: '';
+    width: 9em;
+    height: 9em;
+    z-index: -1;
+    background: #c7c6c6;
+    opacity: 0.1;
+    z-index: 5;
+    border-radius: 1em;
+  }
+
+  &__carousel {
+    position: relative;
+    top: -5em;
+    z-index: 1;
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 1em;
+    background: #ffffff;
+    overflow: hidden;
+    box-shadow: 0.375em 0.375em 2.75em 0 rgba(0, 0, 0, 0.08);
+
+    box-shadow: 0.37em 0.37em 3.18em 0 rgba(0, 102, 255, 0.12);
+  }
+
+  &__slide-inner-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 8em 2em 5em 2em;
+  }
+
+  &__perk-image {
+    display: inline-block;
+    width: 45%;
+    min-width: 18em;
+    height: auto;
+    border-radius: 1em;
+  }
+
+  &__perk-info {
+    width: 40%;
+    min-width: 20em;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: space-between;
+
+    h2 {
+      color: #017dbd;
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+  }
+
+  &__perk-description {
+    margin: 1.5em 0;
+    color: #6c6c6c;
+    line-height: 1.5;
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  //   &__perk-point {
+  //     display: flex;
+  //     justify-content: flex-start;
+  //     gap: 1em;
+  //     font-size: 1em;
+  //     font-weight: 500;
+  //     color: #6c6c6c;
+
+  //     img {
+  //       width: 1.5em;
+  //       height: auto;
+  //       margin-right: 0.5em;
+  //     }
+
+  //     p {
+  //       display: flex;
+  //       justify-content: flex-start;
+  //       align-items: center;
+  //       font-size: 1em;
+  //       color: #007cbc;
+  //       white-space: nowrap;
+  //     }
+  //   }
+
+  &__contact-btn {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0.8em 4em;
+    background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+    border-radius: 0.5em;
+    color: #ffffff;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    width: fit-content;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 720px) {
+
+  .corporate-services{
+   &__slide-inner-box{
+flex-direction: column;
+padding: 7em 0em 0em 2em;
+    }
+    &__perk-info{
+      min-width: 100%;
+    }
+    &__perk-info{
+      width: 100%;
+    }&__btn{
+      margin-top: 0%;
+    }&__perk-image{
+      min-width: 14em;
+    }
+    &__contact-btn {
+      margin-top: 0em;
+     } }
+  }

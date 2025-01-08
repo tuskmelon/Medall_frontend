@@ -1,0 +1,104 @@
+.franchise-hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  padding: 3em 5%;
+  font-family: 'Red Hat Display';
+  background: url('../../assets/images/curve-line.png') no-repeat center;
+  background-size: 100% 100%;
+
+  &::before {
+    position: absolute;
+    top: 85%;
+    left: -2%;
+    content: '';
+    width: 7.6em;
+    height: 7.6em;
+    border-radius: 50%;
+    background: #b41e85;
+    opacity: 0.38;
+    filter: blur(3em);
+  }
+
+  &__details {
+    margin-top: 2.5em;
+    h1 {
+      color: #41413e;
+      font-size: 2.5em;
+      font-weight: 700;
+      width: 75%;
+      min-width: 12em;
+
+      span {
+        color: #007cbc;
+      }
+    }
+
+    p {
+      color: #3d3d3d;
+      font-size: 1em;
+      font-weight: 600;
+      margin: 1em 0;
+      width: 70%;
+      line-height: 1.5;
+    }
+
+    ul {
+      margin-top: 1.5em;
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+
+        img {
+          width: 1.6em;
+          height: auto;
+          margin-right: 1em;
+        }
+
+        span {
+          color: #007cbc;
+          font-size: 0.875em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 80%;
+    min-width: 18em;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .franchise-hero{
+    flex-direction: column;
+    &__details h1{
+      font-size: 1.5em;
+      width: 100%;
+    }
+    &__details p{
+      width: 90%;
+
+    }
+
+  }
+  .franchise-form{
+    &__image{
+      display: none
+    }
+  }
+  // .advantage{
+  //   flex-direction: column;
+  // &__info{
+  //   width: 100% !important;
+  // }
+  // }
+
+}

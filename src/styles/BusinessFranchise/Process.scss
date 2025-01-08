@@ -1,0 +1,139 @@
+.process {
+  padding: 3em 5%;
+  font-family: 'Red Hat Display';
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #464646;
+
+      span {
+        color: #007cbc;
+      }
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 500;
+      color: #6c6c6c;
+      margin: 1em 0;
+      width: 60%;
+    }
+  }
+
+  &__timeline-container {
+    padding: 3em 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 5em;
+  }
+
+  &__timeline-row {
+    width: 15em;
+    img {
+      width: 65%;
+      height: auto;
+    }
+  }
+
+  &__step-info {
+    margin: 4em 0;
+    h3 {
+      color: #007cbc;
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+
+    p {
+      color: #3e3c3c;
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    &--margin {
+      margin-top: 0;
+    }
+  }
+
+  &__vertical-line-container {
+    position: relative;
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    // border: 2px solid red;
+  }
+
+  &__vertical-line {
+    align-self: flex-start;
+    height: 95%;
+    width: 0.25em;
+    background: linear-gradient(
+      180deg,
+      #b41e85 0%,
+      rgba(180, 30, 133, 0) 112.35%
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__dots {
+    width: 1em;
+    height: 1em;
+    background: #b41e85;
+    border-radius: 50%;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+      color: #6c6c6c;
+      font-size: 1em;
+      font-weight: 500;
+      width: 70%;
+      margin-bottom: 2em;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 0.875em;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 1em 15%;
+      background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+      border-radius: 0.5em;
+      color: #ffffff;
+      margin-top: 1.2em;
+      display: inline-block;
+    }
+  }
+}
+
+// Vertical Timeline styling
+// .vertical-timeline {
+//   padding: 0 !important;
+// }
+// .vertical-timeline--two-columns .vertical-timeline-element-icon {
+//   width: 1em !important;
+//   height: 1em !important;
+//   left: 51.85% !important;
+//   box-shadow: none;
+// }

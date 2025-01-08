@@ -1,0 +1,240 @@
+.enquiry-form {
+  font-family: 'Red Hat Display';
+  padding: 2em 5%;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #464646;
+
+      span {
+        color: #007cbc;
+      }
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 500;
+      color: #6c6c6c;
+      margin: 1em 0;
+      width: 60%;
+    }
+  }
+
+  &__container {
+    position: relative;
+    padding: 2em 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__inner-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2em;
+    background: #fafafa;
+    box-shadow: 0.25em 0.25em 3.125em rgba(0, 0, 0, 0.04);
+    border-radius: 1em;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 4em;
+      height: 6em;
+      // background: url('../../assets/images/leaf.svg') no-repeat center;
+      background-size: 100% 100%;
+      z-index: -1;
+    }
+
+    &::before {
+      top: 5%;
+      left: -2.1em;
+      transform: rotate(290deg);
+    }
+
+    &::after {
+      top: 80%;
+      right: -2.4em;
+      transform: rotate(17deg);
+    }
+  }
+
+  &__side-image {
+    background: #007cbc;
+    color: #ffffff;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+
+    h2 {
+      font-size: 2em;
+      font-weight: 400;
+      margin-bottom: 0.2em;
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 400;
+    }
+
+    img {
+      width: 70%;
+      height: auto;
+      margin-top: 20%;
+    }
+  }
+
+  &__company-logo {
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-inner-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #f9f9f9;
+
+      width: 6em;
+      height: 6em;
+      margin-left: -3%;
+
+      img {
+        width: 5em;
+        height: auto;
+      }
+    }
+  }
+
+  form {
+    position: relative;
+    z-index: 8;
+    padding: 2em 4em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    font-weight: 600;
+
+    label {
+      color: #272727;
+      margin-bottom: 0.2em;
+    }
+
+    input,
+    textarea {
+      font-family: 'Red Hat Display';
+      background: #ffffff;
+      border-radius: 0.5em;
+      padding: 0.5em 1em;
+      border: none;
+      outline: none;
+      color: #007cbc;
+      width: 100%;
+      width: 28em;
+      height: 2.75em;
+      font-size: 0.875em;
+      font-weight: 600;
+
+      &::placeholder {
+        color: #9e9e9e;
+        font-size: 0.875em;
+        opacity: 1;
+      }
+
+      // Hide arrow from type number Input tag
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &[type='number'] {
+        appearance: texfield;
+        -moz-appearance: textfield;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 6em;
+    }
+  }
+
+  &__submit-button {
+    font-family: 'Red Hat Display';
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 0.8em 3.5em;
+    color: #ffffff;
+    background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+    border-radius: 0.5em;
+    outline: none;
+    border: none;
+    margin-top: 2em;
+    width: fit-content;
+    cursor: pointer;
+    box-shadow: 0px 0.55em 2em #5051519e;
+    animation: btnBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+      alternate;
+
+    // &:hover {
+    //   animation: none;
+    // }
+  }
+
+  @media only screen and (max-width: 900px) {
+    &__inner-container {
+      flex-flow: column;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    &__inner-container {
+      flex-direction: column;
+      padding: 0%;
+    }
+
+    form {
+      padding: 0%;
+    }
+
+    &__input-group {
+      input,
+      textarea {
+        width: 22em;
+      }
+    }
+  }
+}

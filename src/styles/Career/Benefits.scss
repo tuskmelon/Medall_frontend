@@ -1,0 +1,178 @@
+.benefits {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Red Hat Display';
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #3d3d3d;
+
+      span {
+        color: #027cbc;
+      }
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin-top: 1.3em;
+      width: 80%;
+    }
+  }
+
+  &__perks-container {
+    background: #dbedf9;
+    padding: 2em 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2.5em;
+  }
+
+  &__perk {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7f7;
+    // padding: 1em 2em;
+
+    img {
+      width: 3.5em;
+      height: auto;
+      padding: 0.5em;
+      border-radius: 50%;
+      background: #dbedf9;
+      background-position: center;
+    }
+
+    p {
+      font-size: 1em;
+      font-weight: 600;
+      color: #403f3f;
+      margin-top: 1em;
+      font-family: 'Red Hat Display';
+    }
+  }
+}
+
+$modal-background-color: rgba(49, 49, 49, 0.8);
+$modal-content-background: #f1f1f1;
+
+// .active-modal{
+// overflow-y: hidden;
+// }
+
+.btn-modal {
+  padding: 20px 30px;
+  background-color: transparent;
+  display: block;
+  // margin: 100px auto 0;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #403f3f;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #a5d3f0;
+  background: #f7f7f7;
+  // border: none;
+}
+.modal {
+  z-index: 999 !important;
+}
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: $modal-background-color;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: $modal-content-background;
+  padding: 50px 28px;
+  border-radius: 3px;
+  width: 60%;
+  // min-width: 300px;
+  border-radius: 20px;
+}
+.close-modal img {
+  width: 70%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.popupcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-family: 'Red Hat Display';
+  padding: 15px;
+  text-align: left;
+}
+.popupcontainer .modalimg {
+  width: 250px;
+}
+.heartimg {
+  width: 4%;
+}
+.popupcontainer h2 {
+  color: #007cbc;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  gap: 1em;
+}
+.popupcontainer h1 {
+  color: #007cbc;
+  padding-bottom: 1em;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.popupcontainer p {
+  color: #6c6c6c;
+
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: 0.72px;
+  padding: 0.7em 0em;
+}
+@media only screen and (max-width: 900px) {
+.benefits__header h1{
+  font-size: 1.2em;
+}
+}

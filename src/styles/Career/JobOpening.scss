@@ -1,0 +1,181 @@
+.job {
+  position: relative;
+  padding: 2em 5%;
+  font-family: 'Red Hat Display';
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 7.6em;
+    height: 7.6em;
+    border-radius: 50%;
+    background: #b41e85;
+    opacity: 0.38;
+    filter: blur(3em);
+  }
+
+  &::before {
+    top: 5%;
+    left: -2%;
+  }
+
+  &::after {
+    right: -2%;
+    bottom: 10%;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #3d3d3d;
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin-top: 1.3em;
+      width: 80%;
+    }
+  }
+
+  //   Job Card Styling
+  &__openings-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em 5%;
+  }
+
+  &__card-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+    min-width: 20em;
+
+    &:hover {
+      &::before {
+        transform: skewX(-3deg);
+      }
+    }
+
+    // Appliying gradient border to Card
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      padding: 0.1em;
+      box-sizing: content-box;
+      z-index: -1;
+      border-radius: 1em;
+      transition: all 0.5s;
+      background: linear-gradient(123.13deg, #007cbc 2.02%, #b41e85 97.15%),
+        linear-gradient(0deg, #ffffff, #ffffff);
+    }
+  }
+
+  &__card {
+    padding: 1em;
+    background: #ffffff;
+    box-shadow: 0.25em 0.25em 1em rgba(0, 0, 0, 0.25);
+    border-radius: 1em;
+
+    &:hover {
+      .job__know-more-button {
+        animation: btnBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+          alternate;
+      }
+    }
+
+    h3 {
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 1.25em;
+      padding: 0 0 1em 0;
+      color: #b41e85;
+
+      p {
+        span {
+          color: #027cbc;
+        }
+      }
+    }
+  }
+
+  &__details {
+    font-family: 'Red Hat Display';
+
+    p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1em;
+      color: #515151;
+      font-size: 0.87em;
+      font-weight: 600;
+
+      img {
+        margin-right: 1em;
+        width: 1.8em;
+        height: 1.8em;
+      }
+
+      a {
+        color: #515151;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__description {
+    position: relative;
+    display: inline-block;
+    max-height: 3em;
+    line-height: 1.5;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: '...read more';
+      right: 0;
+      bottom: 0;
+      font-weight: 700;
+      background: #ffffff;
+      color: #000000;
+    }
+  }
+
+  &__know-more-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1em;
+
+    a {
+      text-decoration: none;
+      font-size: 0.875em;
+      color: #ffffff;
+      font-weight: 500;
+      background: linear-gradient(93.28deg, #b41e85 11.09%, #007cbc 93.81%);
+      border-radius: 0.5em;
+      outline: none;
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
+  }
+}

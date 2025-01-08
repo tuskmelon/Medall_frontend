@@ -1,0 +1,59 @@
+.transactions {
+  font-family: 'Red Hat Display';
+  padding: 1em;
+  //   color: red;
+
+  h2 {
+    margin: 1em 0;
+  }
+
+  &-product-table {
+    border: 0.1em solid rgba(0, 0, 0, 0.395);
+    border-collapse: collapse;
+    padding-left: 1em;
+    border-radius: 0;
+    border: none;
+
+    tr {
+      td {
+        border-radius: 0.1em;
+      }
+    }
+  }
+}
+
+.transactions-response {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  z-index: 9;
+  font-family: 'Red Hat Display';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-size: 1.1em;
+  color: #000000;
+
+  &__container {
+    background: rgba(255, 255, 255, 0.684);
+    box-shadow: 0 0.5em 2em 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0.25em);
+    border-radius: 0.1em;
+    padding: 2em;
+    border: 0.0625em solid rgba(255, 255, 255, 0.18);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    color: #000000;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+  }
+}

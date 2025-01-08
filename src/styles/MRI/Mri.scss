@@ -1,0 +1,56 @@
+.mri {
+  position: relative;
+  top: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  // overflow: hidden;
+
+  &__details {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 2em 5%;
+  }
+
+  &__book-call-form-container {
+    position: sticky;
+    top: 2em;
+  }
+
+  &__faqs-container {
+    margin-top: 2em;
+  }
+
+  &__why-this-mri {
+    position: sticky;
+    top: 9em;
+    width: 40%;
+
+    h2 {
+      color: #007cbc;
+      font-size: 1.33em;
+      font-weight: 700;
+      line-height: 1.3;
+
+      span {
+        color: #b41e85;
+      }
+    }
+
+    img {
+      width: 100%;
+      margin-top: 1em;
+      border-radius: 0.3em;
+    }
+
+    p {
+      color: #555555;
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-top: 1em;
+    }
+  }
+}

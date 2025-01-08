@@ -1,0 +1,181 @@
+.testimonial {
+  font-family: 'Red Hat Display';
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2em;
+
+    h1 {
+      font-size: 2em;
+      font-weight: 700;
+      color: #3d3d3d;
+
+      span {
+        color: #027cbc;
+      }
+    }
+
+    h3 {
+      font-size: 1em;
+      font-weight: 600;
+      color: #6c6c6c;
+      margin-top: 1.3em;
+      width: 80%;
+    }
+  }
+
+  &__cards-container {
+    width: 100%;
+    padding: 2em 0;
+  }
+
+  &__carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__outer-card {
+    max-width: 23em;
+  }
+
+  &__outer-card-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    height: 26em;
+    background: #f4f4f4;
+    box-shadow: 0.125em 0.25em 0.25em rgba(152, 152, 152, 0.25);
+    border-radius: 0.5em;
+    margin: 1em 0;
+
+    &:hover {
+      .testimonial__card {
+        .testimonial__employee-pic {
+          border: 0.15em solid #b41e85;
+        }
+      }
+
+      &::before {
+        transform: skewX(-2deg);
+        animation: backgroundChange 0.3s linear forwards;
+        // Keyframes written in App.js
+      }
+    }
+
+    // Appliying gradient border to Card
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      padding: 0.1em;
+      box-sizing: content-box;
+      z-index: -1;
+      border-radius: 0.5em;
+      transition: all 0.5s;
+      background: linear-gradient(123.13deg, #007cbc 2.02%, #b41e85 97.15%),
+        linear-gradient(0deg, #ffffff, #ffffff);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    width: 90%;
+    padding: 2em 1em 5em 1em;
+
+    img {
+      width: 4.1em;
+      height: 4.1em;
+      border-radius: 50%;
+    }
+
+    h4 {
+      font-size: 1.05em;
+      color: #b41e85;
+      margin-top: 0.5em;
+      margin-bottom: 1.2em;
+    }
+
+    p {
+      position: relative;
+      font-size: 1em;
+      line-height: 1.5;
+      font-weight: 600;
+      color: #252525;
+
+      span {
+        position: relative;
+        z-index: 2;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: 4.5em;
+        height: 3.5em;
+        z-index: 1;
+        background: url('../../assets/images/quotation-mark.png') center
+          no-repeat;
+        background-size: 100% 100%;
+      }
+
+      &::before {
+        top: -2em;
+        left: -1.5em;
+      }
+
+      &::after {
+        bottom: -2em;
+        right: -1em;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+
+   
+  .testimonial__outer-card-box {
+
+    margin-left: 2em;
+  }
+
+  .testimonial__card h4{
+    z-index: 999;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .testimonial__header h1 {
+    font-size: 1em;
+  }
+  .testimonial__outer-card-box {
+
+    margin-left: 2em;
+  }
+
+  .testimonial__card h4{
+    z-index: 999;
+  }
+
+  .testimonial__card p span{
+    font-size: 0.8em;
+  }
+
+
+}
+

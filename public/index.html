@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Google Tag Manager -->
+  <!-- <script defer>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.defer = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-TX7WNJ9');
+    </script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NMJ3M5T');</script>
+
+  <!-- End Google Tag Manager -->
+
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <meta name="viewport" content="width=350, initial-scale=1" />
+
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Medall Diagnostics" />
+  <meta name="description"
+    content="India's largest diagnostic center with 200+ pathologists & radiologists, providing 1300+ pathology & 800+ radiology tests nation-wide with 250+ branches" />
+
+  <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+  <link rel="manifest" href="./manifest.json" />
+  <title>Medall</title>
+
+  <!-- Facebook domain verification tag  -->
+  <meta name="facebook-domain-verification" content="6b3ybaoanjpovxk7qjigxgglv8qoww" />
+  <!-- Facebook domain verification tag END -->
+
+  <!-- Meta Pixel Code -->
+  <!-- <script defer>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      'script',
+      'https://connect.facebook.net/en_US/fbevents.js',
+    );
+    fbq('init', '2206448649529767');
+    fbq('track', 'PageView');
+  </script> -->
+
+
+  <!-- <noscript><img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=2206448649529767&ev=PageView&noscript=1" /></noscript> -->
+  <!-- End Meta Pixel Code -->
+
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1043660027210537',
+        xfbml: true,
+        version: 'v20.0'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX7WNJ9" height="0" width="0" loading="lazy"
+      style="display: none; visibility: hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMJ3M5T" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+</body>
+
+</html>

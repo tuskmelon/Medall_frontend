@@ -1,0 +1,876 @@
+@mixin input {
+  background: #ffffff;
+  border: 0.0312em solid #b41e85;
+  border-radius: 0.5em;
+  padding-left: 2.3em;
+  outline: none;
+  font-size: 0.875em;
+  font-family: 'Red Hat Display';
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+
+  &__navbar {
+    position: relative;
+    padding: 0.75em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      content: '';
+    }
+
+    &::after {
+      background: #ffffff;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+
+    &::before {
+      right: 0;
+      z-index: -1;
+      width: 84%;
+      height: 100%;
+      background: linear-gradient(169deg, #007cbcd9 0%, #b41e85 100%);
+    }
+  }
+
+  &__company-logo {
+    width: 11em;
+    height: auto;
+  }
+
+  &__location-search-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+    margin-left: 1em;
+    align-items: center;
+    width: 40%;
+  }
+
+  &__user-location {
+    position: relative;
+    top: 0;
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    z-index: 12;
+    border: 0.0312em solid #b41e85;
+    white-space: nowrap;
+
+    &--active {
+      animation: pulse 2s infinite;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 212, 0.867);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(255, 0, 230, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+  }
+
+  &__location-selector {
+    position: relative;
+    width: 99%;
+    cursor: pointer;
+    height: 2.3em;
+    font-family: 'Red Hat Display';
+    // background-color: #ffffff;
+    padding-left: 2em !important;
+    padding-right: 1em;
+    border: none !important;
+    border-radius: 3em;
+    z-index: 10;
+    outline: none !important;
+  }
+
+  &__location-option {
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &__location-icon {
+    position: absolute;
+    z-index: 9999;
+    cursor: pointer;
+    // background-color: #ffffff;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 0.3em;
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  &__search {
+    position: relative;
+    top: 0;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+      min-width: 20em;
+      width: 100%;
+      height: 2.5em;
+
+      @include input;
+
+      &::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      &::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button,
+      &::-webkit-search-results-decoration {
+        display: none;
+      }
+    }
+  }
+
+  &__search-icon {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 0.3em;
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+
+  &__search-result-container {
+    position: absolute;
+    top: 2.5em;
+    z-index: 9999;
+    list-style: none;
+    background: #ffffff;
+    width: 100%;
+    border-radius: 0.2em;
+    box-shadow: 0.0625em 3em 4em -0.8em rgba(0, 0, 0, 0.65);
+
+    li {
+      a {
+        padding: 0.5em;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #363c41;
+        letter-spacing: 0.03em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        font-size: 1em;
+        font-weight: 400;
+
+        span {
+          display: inline-block;
+          transform: rotate(270deg);
+        }
+
+        &:hover {
+          color: #000000;
+          background-color: #a3cef75c;
+        }
+      }
+    }
+  }
+
+  &__download-report {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875em;
+    background: #ffffff;
+    border: 0.03125em solid #b41e85;
+    box-shadow: 0 0.125em 1em rgba(0, 0, 0, 0.25);
+    border-radius: 0.5em;
+    white-space: nowrap;
+    height: 2.5em;
+    padding: 0 0.56em;
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 0.3em;
+    }
+  }
+
+  &__customer-care {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    img {
+      width: 2.2em;
+      height: auto;
+      padding: 0.5em;
+      background-color: #ffffff;
+      border: 0.03125px solid #b41e85;
+      border-radius: 0.5em;
+    }
+
+    &-number {
+      margin-left: 0.625em;
+      width: 9em;
+      color: #ffffff;
+      font-size: 0.87em;
+
+      h4 {
+        font-weight: 400;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+  }
+
+  //   Cart icon styling
+  &__cart {
+    position: relative;
+    top: 0;
+    background: #007cbc;
+    border: 0.032em solid #ffffff;
+    border-radius: 0.5em;
+    padding: 0.3em 0.3em 0.1em 0.3em;
+
+    img {
+      width: 1.2em;
+      height: auto;
+    }
+
+    // cart items
+    span {
+      position: absolute;
+      top: -0.7em;
+      right: -1.2em;
+      background: #ffffff;
+      color: #000000;
+      min-width: 1.5em;
+      height: 1.6em;
+      padding: 0.3em;
+      border-radius: 50%;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.75em;
+    }
+  }
+
+  &__vertical-line {
+    border-left: 0.0625em solid #ffffff;
+    width: 0;
+    height: 2em;
+  }
+
+  &__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      font-size: 0.875em;
+      font-weight: 500;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    img {
+      width: 2em;
+      height: auto;
+      padding: 0.3em;
+      background-color: #ffffff;
+      border: 0.032em solid #b41e85;
+      border-radius: 0.5em;
+      // margin-left: 1em;
+      cursor: pointer;
+    }
+  }
+
+  &__ask-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
+  &__logged-user {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: 9.3em;
+    padding: 0 0.1em;
+    // border: 2px solid blue;
+    color: #ffffff;
+
+    img,
+    p {
+      position: relative;
+      z-index: 999;
+    }
+  }
+
+  &__log-out-box {
+    position: absolute;
+    top: -0.9em;
+    right: -1.7em;
+    padding-bottom: 1em;
+    width: 10.4em;
+    height: 9em;
+    z-index: 666;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 0.5em 0 0 0.5em;
+    background: linear-gradient(169deg, #007cbcd9 0%, #b41e85 100%);
+    box-shadow: -0.0625em 0.0625em 2em 0 rgba(0, 0, 0, 0.75);
+    border: 0.0625em solid rgb(0, 119, 255);
+    font-family: 'Red Hat Display';
+    font-size: 1.15em;
+    font-weight: 600;
+
+    button {
+      padding: 0.5em 1.2em;
+      border-radius: 0.5em;
+      border: 0.0625em solid rgb(255, 255, 255);
+      background: #ffffff;
+      color: #000000;
+
+      &:hover {
+        background: linear-gradient(169deg, #007cbcd9 0%, #b41e85 100%);
+        color: #ffffff;
+      }
+    }
+  }
+
+  // Hamburger icon styling
+  &__hamburger-icon {
+    position: absolute;
+    top: 1.55em;
+    left: 1em;
+    width: 1.65em;
+    height: 1.2em;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 12;
+  }
+
+  &__side-bar-close-btn {
+    position: absolute;
+    top: 1em;
+    left: 0.5em;
+    z-index: 13;
+    cursor: pointer;
+
+    img {
+      width: 1.5em;
+      height: auto;
+    }
+  }
+
+  &__hamburger-line {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 0.1em;
+    border-radius: 0.05em;
+    background: #000000;
+    z-index: 12;
+  }
+
+  &__side-bar {
+    position: absolute;
+    top: 0;
+    width: 20em;
+    padding-top: 5em;
+    padding-bottom: 2em;
+    z-index: 10;
+    background: #ffffff;
+    border-bottom-right-radius: 0.5em;
+    box-shadow: 1em 0 5em 0.5em #888888a7;
+    font-family: 'Red Hat Display';
+  }
+
+  // Collapsible Bars styling
+
+  &__menu-container {
+    margin-top: 1em;
+  }
+
+  &__collapsible-bar-container {
+    background: #ffffff;
+    padding-left: 0.5em;
+    padding: 0.8em 0.5em;
+
+    cursor: pointer;
+    font-family: 'Red Hat Display';
+    border-bottom: 0.03em solid #c0c0c0;
+
+    span {
+      width: 100%;
+      display: inline-block;
+      font-size: 1em;
+      font-weight: 500;
+      color: #515050;
+    }
+
+    .is-open {
+      color: #b41e85;
+    }
+  }
+
+  &__child-collapse-bar {
+    padding-top: 0.75em;
+    padding-left: 0.65em;
+    font-size: 0.95em;
+    font-weight: 400;
+
+    ul {
+      padding-left: 0.5em;
+      // background: #eeeeee;
+      li {
+        margin: 0.85em 0;
+
+        a {
+          text-decoration: none;
+          color: #515050;
+          font-size: 0.95em;
+
+          &:hover {
+            color: #b41e85;
+          }
+        }
+      }
+    }
+  }
+
+  &__health-packages {
+    padding-left: 0.5em;
+    // background: #eeeeee;
+    li {
+      margin: 0.85em 0;
+
+      a {
+        text-decoration: none;
+        color: #515050;
+        font-size: 0.95em;
+
+        &:hover {
+          color: #b41e85;
+        }
+      }
+    }
+  }
+
+  &__direct-test-link {
+    li {
+      margin: 0.85em 0;
+
+      a {
+        text-decoration: none;
+        color: #515050;
+
+        &:hover {
+          color: #b41e85;
+        }
+      }
+    }
+  }
+
+  &__organ-menu {
+    padding: 0.5em 0 0.5em 0.5em;
+  }
+
+  &__sidebar-logout-btn {
+    width: 100%;
+    background: #ffeaf8;
+    margin-top: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      color: #b41e85;
+      font-size: 1em;
+      font-weight: 600;
+      font-family: 'Red Hat Display';
+      padding: 0.75em 0;
+      cursor: pointer;
+    }
+  }
+
+  // Drop drop location menu styling
+  .react-dropdown-select-item.react-dropdown-select-item-selected {
+    background: none;
+    color: #000000;
+
+    &:hover {
+      background: rgba(0, 116, 217, 0.1);
+    }
+  }
+
+  .react-dropdown-select-dropdown {
+    width: 10em;
+  }
+
+  .react-dropdown-select-content {
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 1337px) {
+    &__company-logo {
+      width: 9em;
+    }
+
+    &__search {
+      width: 26%;
+    }
+  }
+
+  @media screen and (max-width: 1231px) {
+    &__navbar {
+      padding: 0.75em 0.5em;
+    }
+    &__vertical-line {
+      position: relative;
+      left: 0.3em;
+    }
+  }
+
+  @media screen and (max-width: 1145px) {
+    &__login {
+      button {
+        color: #000000;
+      }
+    }
+
+    &__company-logo {
+      width: 9.5em;
+    }
+
+    &__logo-link {
+      position: relative;
+      left: 4em;
+    }
+
+    &__navbar {
+      height: 8em;
+      align-items: flex-start;
+      // border: 2px solid red;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__location-search-container {
+      position: absolute;
+      top: 5em;
+      width: 98%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 0;
+    }
+
+    &__user-location {
+      order: 2;
+      z-index: 99;
+    }
+
+    &__search {
+      width: 79%;
+    }
+
+    &__side-bar-button-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      margin-bottom: 1.5em;
+      // border-bottom: 0.03em solid #c0c0c0;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        background: #b41e85;
+        font-size: 1em;
+        font-weight: 400;
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 0.5em;
+        border-radius: 0.3em;
+
+        transition: all 0.5s ease;
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+
+    &__download-report {
+      display: none;
+    }
+
+    &__icon-with-text {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0.75em 0 0.75em 0.5em;
+      gap: 0.5em;
+      font-size: 1em;
+      font-weight: 500;
+      color: #515050;
+      text-decoration: none;
+      color: #007cbc;
+
+      &:hover {
+        color: #b41e85;
+      }
+
+      img {
+        width: 1.3em;
+        height: auto;
+      }
+
+      p {
+        span {
+          color: #000000;
+          font-size: 0.75em;
+        }
+
+        font-size: 1em;
+        display: inline-block;
+      }
+    }
+
+    &__customer-care {
+      display: none;
+      margin: 2em 0 1em 1em;
+      width: fit-content;
+      color: #000000;
+      &:hover {
+        background: #ccfbfb;
+      }
+
+      &--mobile {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-left: 0;
+        color: #000000;
+        background: #ffffff;
+        padding: 0.5em 0 0.5em 0.5em;
+
+        img {
+          background: none;
+          border: none;
+        }
+      }
+    }
+
+    &__customer-care-number {
+      padding: 0;
+
+      &--mobile {
+        width: 100%;
+        color: #000000;
+
+        h4 {
+          margin-bottom: 0.3em;
+        }
+      }
+    }
+
+    &__cart {
+      position: absolute;
+      top: 0.85em;
+      right: 6.5em;
+      border-radius: 50%;
+
+      span {
+        right: -0.5em;
+      }
+
+      img {
+        width: 1.3em;
+      }
+    }
+
+    &__logged-user {
+      color: #000000;
+    }
+
+    &__vertical-line {
+      display: none;
+    }
+
+    &__hamburger-icon {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__logo-link {
+      left: 3em;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    &__search {
+      width: 67%;
+    }
+
+    &__user-location {
+      right: 0.3em;
+      font-size: 0.9em;
+      height: 2.3em;
+    }
+
+    &__hamburger-icon {
+      left: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 510px) {
+    &__search {
+      font-size: 0.9em;
+      input {
+        min-width: 0;
+      }
+    }
+
+    &__company-logo {
+      width: 8em;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    &__search {
+      width: 61%;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    &__hamburger-icon {
+      width: 1.3em;
+      top: 1.15em;
+    }
+
+    &__company-logo {
+      width: 7em;
+    }
+
+    &__logo-link {
+      left: 2em;
+    }
+
+    &__cart {
+      right: 5.5em;
+
+      img {
+        width: 1.1em;
+      }
+    }
+  }
+}
+
+.login_img {
+  padding-left: 5px;
+}
+
+.login_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Styling Collapsible bars
+.header__collapsible-bar-container {
+  .Collapsible {
+    .is-closed:after,
+    .is-open:after {
+      width: 1em;
+      height: 1em;
+      font-size: 1.2em;
+      font-weight: 700;
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .is-closed:after {
+      content: '>';
+      transform: rotate(90deg);
+    }
+
+    .is-open:after {
+      content: '<';
+      transform: rotate(90deg);
+    }
+  }
+  .collapsible_span_mark {
+    color: #b41e85 !important;
+  }
+}

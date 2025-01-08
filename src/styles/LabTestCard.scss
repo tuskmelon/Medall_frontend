@@ -1,0 +1,116 @@
+.lab-test-card {
+  font-family: 'Red Hat Display';
+  max-width: 24em;
+  min-width: 18em;
+  width: 45%;
+  height: fit-content;
+  background: #ffffff;
+  border-bottom: 0.0625em solid #b41e85;
+  box-shadow: 0.125em 0.125em 1em rgba(0, 0, 0, 0.25);
+  border-radius: 0.75em;
+  margin: 1em;
+  text-decoration: none;
+
+  &:hover {
+    button {
+      animation: btnBounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+        alternate;
+    }
+
+    @keyframes btnBounce {
+      from {
+        transform: translateY(0.187em);
+      }
+      to {
+        transform: translateY(-0.187em);
+      }
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+    border-radius: 0.75em;
+  }
+
+  &__details {
+    padding: 1em;
+
+    h3 {
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #007cbc;
+    }
+  }
+
+  &__description {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #0e0e0e;
+    margin: 0.5em 0;
+  }
+
+  &__parameter {
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #b41e85;
+    margin-bottom: 1em;
+  }
+
+  &__test-not-available {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-size: 1em;
+      font-weight: 700;
+      color: #000000;
+    }
+
+    button {
+      background: linear-gradient(96.84deg, #b41e85 10.6%, #007cbc 80.19%);
+      opacity: 0.8;
+      border-radius: 0.56em;
+      padding: 0.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      img {
+        width: 1.1em;
+        height: auto;
+        margin-right: 0.5em;
+      }
+
+      span {
+        color: #ffffff;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0.5em;
+    font-size: 0.9em;
+  }
+
+  @media screen and (max-width: 608px) {
+    width: 44%;
+    min-width: 17em;
+    max-width: unset;
+  }
+
+  @media screen and (max-width: 519px) {
+    width: 90%;
+    min-width: unset;
+    max-width: unset;
+  }
+}

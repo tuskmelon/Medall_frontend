@@ -1,0 +1,110 @@
+.booking-steps {
+  font-family: 'Red Hat Display';
+  padding: 3em 0;
+  background: #e3f3fb;
+  margin: 2em 0;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    min-width: 20em;
+
+    h3 {
+      font-size: 1em;
+      font-weight: 700;
+      color: #141414;
+      margin: 1em;
+    }
+
+    p {
+      font-size: 0.875em;
+      font-weight: 600;
+      color: #111111;
+      line-height: 1.5;
+      width: 85%;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 22%;
+    left: 25%;
+    width: 50%;
+    display: inline-block;
+    border-top: 0.1em dashed #027cbc;
+  }
+
+  &__icon-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    height: 6em;
+    background: #027cbc;
+    border-radius: 50%;
+
+    img {
+      padding: 0.5em;
+      width: 70%;
+      height: 70%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+ 
+  .booking-steps__container {
+    flex-flow: column !important;
+    border: none;
+  }
+
+  
+  .book-call-form__input-group input {
+    width: 23em !important;
+  }
+
+  .booking-steps__line {
+    border: none !important;
+  }
+
+  .booking-steps__step {
+    width: 100% !important;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+ 
+  .booking-steps__container {
+    flex-flow: column !important;
+    border: none;
+  }
+
+  
+  .book-call-form__input-group input {
+    width: 100% !important;
+  }
+
+  .booking-steps__line {
+    border: none !important;
+  }
+
+  .booking-steps__step {
+    width: 100% !important;
+  }
+}
+

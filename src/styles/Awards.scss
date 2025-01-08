@@ -1,0 +1,130 @@
+.awards {
+  position: relative;
+  width: 100%;
+  font-family: 'Red Hat Display', sans-serif;
+  // overflow: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 11em;
+    height: 60%;
+    z-index: -1;
+    background-size: 100% 100%;
+  }
+
+  &::before {
+    top: 10%;
+    left: 0;
+    background: url('../assets/images/hexagons.png') no-repeat;
+  }
+
+  &::after {
+    top: 20%;
+    right: 0;
+    background: url('../assets/images/hexagons-right.png') no-repeat;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 1em 0;
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.5em 2%;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    min-width: 18em;
+    padding: 2em;
+    color: #464646;
+
+    img {
+      width: 5em;
+      height: auto;
+    }
+
+    h3 {
+      margin: 0.5em 0;
+      font-size: 1.3em;
+      color: #231f20;
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.875em;
+    }
+    ul {
+      li {
+        font-size: 0.875em;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    &__details {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow: scroll;
+      width: 100%;
+      overflow-y: hidden;
+
+      &::-webkit-scrollbar {
+        height: 0.3em;
+      }
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &__card {
+      min-width: 15em;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    &__card {
+      padding: 1em;
+      font-size: 1em;
+
+      img {
+        width: 4em;
+      }
+    }
+
+    &::before,
+    &::after {
+      width: 7em;
+      height: 50%;
+      background-size: contain;
+    }
+
+    &::after {
+      top: 50%;
+    }
+  }
+
+  // @media screen and (max-width: 505px) {
+  //   &__card {
+  //     width: 90%;
+  //     min-width: unset;
+  //   }
+  // }
+}
